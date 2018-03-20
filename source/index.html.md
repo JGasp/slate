@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Dokumentacija
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
@@ -13,17 +13,18 @@ toc_footers:
 
 includes:
   - errors
+  - user_manual
+  - api_doc
 
 search: true
 ---
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Dobrodošli v dokumentaciji študijskega sistema. Zaenkrat je tu še vedno referenčna koda slate projekta, ki pa jo bomo
+v kratkem izbrisali (vse do vključno razdelka **Errors**).
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
-
-This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
+Zbiram predloge za tabe na desni. Mislim, da bo JSON tab dovolj, lahko pa še kaj dodamo.
 
 # Authentication
 
@@ -236,4 +237,3 @@ This endpoint deletes a specific kitten.
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
-
