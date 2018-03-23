@@ -246,6 +246,11 @@
           </li>
           <li>
             <a href="#navodila-za-uporabo" class="toc-h1 toc-link" data-title="navodila-za-uporabo">Navodila za uporabo</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#vzdrzevanje-uporabnikov" class="toc-h2 toc-link" data-title="vzdrzevanje-uporabnikov">Vzdrževanje uporabnikov</a>
+                  </li>
+              </ul>
           </li>
           <li>
             <a href="#dokumentacija-api" class="toc-h1 toc-link" data-title="dokumentacija-api">Dokumentacija API</a>
@@ -497,6 +502,60 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </tbody></table>
 <h1 id='navodila-za-uporabo'>Navodila za uporabo</h1>
 <p>V datoteki <code>includes/_user_manual.md</code> se bo pisalo navodila za uporabo.</p>
+<h2 id='vzdrzevanje-uporabnikov'>Vzdrževanje uporabnikov</h2>
+<p>Vzdrževanje uporabnikov se izvaja preko strežnika KeyCloak. Na strežnik se prijavimo preko
+<a href="https://kanban.smrpo7:31337/auth/admin/master/console">URL-ja</a>.</p>
+
+<p>Prijavimo se z računom administratorja (ob namestitvi ga kreiramo na isti strani). Projekt uporablja področje <code>Kis</code>.</p>
+<h3 id='dodajanje-novega-uporabnika'>Dodajanje novega uporabnika</h3>
+<p>Novega uporabnika dodamo tako, da v levem meniju izberemo <code>Manage &gt; Users</code> in kliknemo na gumb <code>Add user</code>. Prikažejo se
+vnosna polja, kamor vnesemo podatke uporabnika. Vnos potrdimo s klikom na gumb <code>Save</code>. Nastavljanje gesla in upravljanje
+pravic je opisano v nadaljnjih poglavjih.</p>
+<h3 id='pregled-uporabnikov'>Pregled uporabnikov</h3>
+<p>Seznam uporabnikov lahko pregledujemo tako, da v levem meniju izberemo <code>Manage &gt; Users</code> in kliknemo gumb
+<code>View all users</code>. Prikaže se seznam vseh uporabnikov. Podrobnosti uporabnika lahko urejamo s klikom na uporabnikov ID.</p>
+<h3 id='dodajanje-ali-spreminjanje-gesla'>Dodajanje ali spreminjanje gesla</h3>
+<p>Geslo uporabnika lahko urejamo tako, da v pregledu uporabnika izberemo zavihek <code>Credentials</code>. Novo geslo vpišemo v
+vnosna polja. Če je stikalo <code>Temporary</code> vklopljeno, bo moral uporabnik ob prvi prijavi geslo spremeniti. Spremembe
+shranimo s klikom na gumb <code>Reset password</code>.</p>
+<h3 id='upravljanje-s-pravicami-uporabnika'>Upravljanje s pravicami uporabnika</h3>
+<p>Sistem uporablja vloge za upravljanje s pravicami. Pravice uporabnika lahko urejamo v zavihku <code>Role Mappings</code> ob
+pregledovanju uporabnika. Tu lahko uporabniku dodelimo ali odstranjujemo vloge.</p>
+
+<p>Za dodelitev vloge v oknu <code>Available Roles</code> izberemo vlogo, ki jo želimo dodati uporabniku, in kliknemo gumb
+<code>Add selected</code>.</p>
+
+<p>Za odstranitev vloge v oknu <code>Assigned Roles</code> izberemo vlogo, ki jo želimo odstraniti, in kliknemo na gumb
+<code>Remove selected</code>.</p>
+
+<p>Uporabniku lahko dodelimo naslednje vloge:</p>
+
+<table><thead>
+<tr>
+<th>Vloga</th>
+<th>Pomen</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ADMINISTRATOR</td>
+<td>Skrbnik sistema</td>
+</tr>
+<tr>
+<td>DEVELOPER</td>
+<td>Uporabnik, usposobljen za razvijalca</td>
+</tr>
+<tr>
+<td>KANBAN_MASTER</td>
+<td>Uporabnik, ki je usposobljen za vlogo Kanban Master</td>
+</tr>
+<tr>
+<td>PRODUCT_OWNER</td>
+<td>Uporabnik, ki je usposobljen za vlogo Product Owner-ja</td>
+</tr>
+</tbody></table>
+<h3 id='onemogocanje-uporabniskega-racuna'>Onemogočanje uporabniškega računa</h3>
+<p>Uporabniški račun lahko omogočimo tako, da v pregledu uporabnika izberemo zavihek <code>Details</code>. Stikalo <code>User Enabled</code>
+izklopimo in kliknemo na gumb <code>Save</code>. Na podoben način lahko uporabnika omogočimo nazaj.</p>
 <h1 id='dokumentacija-api'>Dokumentacija API</h1>
 <p>V datoteki <code>includes/_api_doc.md</code> se bo pisalo dokumentacijo REST endpoint-ov.</p>
 
