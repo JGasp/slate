@@ -50,3 +50,27 @@ PRODUCT_OWNER | Uporabnik, ki je usposobljen za vlogo Product Owner-ja
 
 Uporabniški račun lahko omogočimo tako, da v pregledu uporabnika izberemo zavihek `Details`. Stikalo `User Enabled`
 izklopimo in kliknemo na gumb `Save`. Na podoben način lahko uporabnika omogočimo nazaj.
+
+## Vzdrževanje projektov
+
+Omogoča kreiranje, urejanje in brisanje projektov. Te funkcije so na voljo le uporabnikom z vlogo `Kanban Master`. 
+
+### Kreiranje novega projekta
+
+Do obrazca za kreiranje projektov pridemo tako, da v orodni vrstici izberemo `Projects` in nato kliknemo gumb `Create project`. 
+V obrazec moramo vnesti ime projekta, naročnika, datum začetka in konca ter iz seznama izbrati razvojno ekipo. 
+Pri izpolnjevanju moramo upoštevati naslednje omejitve:
+
+- datum pričetka mora biti manjši ali enak trenutnemu
+- datum zaključka mora biti večji od trenutnega datuma
+- predvideni datum zaključka mora biti večji od datuma pričetka
+
+Po končanem vnosu podatkov, kliknemo gumb `Submit`. Če so bili vsi podatki pravilno vnešeni in omejitve upoštevane, se projekt ustvari. V nasprotnem primeru se nam prikaže opozorilo, ki nam pove, katera polja so bila napačno vnešena.
+
+### Urejanje projekta
+
+Projekte lahko po kreiranju tudi urejamo. V orodni vrstici moramo izbrati `Projects` in nato klikniti na projekt, ki ga želimo urediti. Odprejo se nam podrobne informacije, pod katerimi se nahaja gumb `Edit`. Ob kliku na ta gumb se nam odpre obrazec za urejanje. Uredimo lahko enaka polja kot pri kreiranju, pri čemer moramo upoštevati zgoraj omenjene omejitve. V primeru, da smo na projektu že začeli z delom in smo mu že določili kartice, datuma začetka ne moramo več spreminjati.
+
+### Brisanje projekta
+
+Če želimo projekt izbrisati, moramo v orodni vrstici izbrati `Projects`, klikniti na projekt, ki ga želimo izbrisati in klikniti na gumb `Delete`. Pojavi se nam potrditveno okno, kjer ponovno kliknemo `Delete` in s tem izbrišemo projekt.
