@@ -4,40 +4,24 @@ V datoteki `includes/_user_manual.md` se bo pisalo navodila za uporabo.
 
 ## Vzdrževanje uporabnikov
 
-Vzdrževanje uporabnikov se izvaja preko strežnika KeyCloak. Na strežnik se prijavimo preko
-[URL-ja](https://kanban.smrpo7:31337/auth/admin/master/console).
-
-Prijavimo se z računom administratorja (ob namestitvi ga kreiramo na isti strani). Projekt uporablja področje `Kis`.
+Vzdrževanje uporabnikov se izvaja preko administratorske [/admin](https://www.kanban.smrpo7/admin), ki je na voljo le uporabnikom v vlogi administratorja.
 
 ### Dodajanje novega uporabnika
 
-Novega uporabnika dodamo tako, da v levem meniju izberemo `Manage > Users` in kliknemo na gumb `Add user`. Prikažejo se
-vnosna polja, kamor vnesemo podatke uporabnika. Vnos potrdimo s klikom na gumb `Save`. Nastavljanje gesla in upravljanje
-pravic je opisano v nadaljnjih poglavjih.
+Na administrativni strani `/admin` s klikom na gumb create administrator lahko ustvari novega uporabnika.
 
 ### Pregled uporabnikov
 
-Seznam uporabnikov lahko pregledujemo tako, da v levem meniju izberemo `Manage > Users` in kliknemo gumb
-`View all users`. Prikaže se seznam vseh uporabnikov. Podrobnosti uporabnika lahko urejamo s klikom na uporabnikov ID.
+Administratorju je omogočeno pregledovanje in iskanje vseh uporabnikov. 
+Išče lahko po ključni besedi z iskalnim poljem, hkrati lahko išče tudi po statusu aktivnosti z klikom na okno Deleted.
 
 ### Dodajanje ali spreminjanje gesla
 
-Geslo uporabnika lahko urejamo tako, da v pregledu uporabnika izberemo zavihek `Credentials`. Novo geslo vpišemo v
-vnosna polja. Če je stikalo `Temporary` vklopljeno, bo moral uporabnik ob prvi prijavi geslo spremeniti. Spremembe
-shranimo s klikom na gumb `Reset password`.
+Administrator lahko ponastavi geslo z klikom na gumb `Set password`, ki se nahaja v oknu s podrobnostmi uporabnika.
 
 ### Upravljanje s pravicami uporabnika
 
-Sistem uporablja vloge za upravljanje s pravicami. Pravice uporabnika lahko urejamo v zavihku `Role Mappings` ob
-pregledovanju uporabnika. Tu lahko uporabniku dodelimo ali odstranjujemo vloge.
-
-Za dodelitev vloge v oknu `Available Roles` izberemo vlogo, ki jo želimo dodati uporabniku, in kliknemo gumb
-`Add selected`.
-
-Za odstranitev vloge v oknu `Assigned Roles` izberemo vlogo, ki jo želimo odstraniti, in kliknemo na gumb
-`Remove selected`.
-
-Uporabniku lahko dodelimo naslednje vloge:
+Administrator ob ustvarjanju ali ob urejanju uporabniškega profila lahko nastavlja vloge v katerih uporabnik nastopa.
 
 Vloga | Pomen
 --- | ---
@@ -48,8 +32,12 @@ PRODUCT_OWNER | Uporabnik, ki je usposobljen za vlogo Product Owner-ja
 
 ### Onemogočanje uporabniškega računa
 
-Uporabniški račun lahko omogočimo tako, da v pregledu uporabnika izberemo zavihek `Details`. Stikalo `User Enabled`
-izklopimo in kliknemo na gumb `Save`. Na podoben način lahko uporabnika omogočimo nazaj.
+Administrator lahko s klikom na gumb `Deactivate` na oknu z uporabniškimi podrobnostmi onemogoči uporabniški račun. 
+Ponovno ga nato lahko aktivira s klikom na gumb `Activate`.
+
+### Vpis uporabnikov v sistem
+
+Uporabniki se lahko vpisujejo v sistem preko uporabniškega imena ali elektronske pošte. Če uporabnik napačno vnese geslo 3 krat zapored se račun začasno blokira za 10 sekund, kar se nato povečuje z dodatnimi poskusi vnosa napačnega gesla.
 
 ## Vzdrževanje projektov
 
