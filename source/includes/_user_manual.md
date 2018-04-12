@@ -62,3 +62,29 @@ Projekte lahko po kreiranju tudi urejamo. V orodni vrstici moramo izbrati `Proje
 ### Brisanje projekta
 
 Če želimo projekt izbrisati, moramo v orodni vrstici izbrati `Projects`, klikniti na projekt, ki ga želimo izbrisati in klikniti na gumb `Delete`. Pojavi se nam potrditveno okno, kjer ponovno kliknemo `Delete` in s tem izbrišemo projekt.
+
+## Vzdrževanje in ustvarjanje novih razvojnih skupin
+
+Omogoča kreiranje, urejanje in vpogled v razvojne skupine. Ustvarjanje in urejanje je omogočeno le uporabniku z vlogo `Kanban Master`. Do strani z pregledom nad razvojnimi skupinami [/dev-team] pridemo tako, da v orodoni vrstici kliknemo na gumb `Dev team`
+
+### Kreiranje novege razvojne skupine
+
+Do obrazca za kreiranje razvojne skupine pridemo tako, da kliknemo gumb `Create project`, ki se nahaja na strani [/dev-team]. V obrazec moramo vnesti ime razvojne skupine, naročnika, ter iz seznama izbrati razvijalce. Pri izpolnjevanju moramo upoštevati naslednje omejitve:
+
+- `Kanban Master` je vedno uporabnik ki ustvarja razvojno skupino (Kasneje lahko v vlogo povabi drugega uporabnika).
+- Povabiti mora enega ali več razvijalcev
+
+Po končanem vnosu podatkov, kliknemo gumb `Submit`. Če so bili vsi podatki pravilno vnešeni in omejitve upoštevane, se razvojna skupina ustvari. V nasprotnem primeru se nam prikaže opozorilo, ki nam pove, katera polja so bila napačno vnešena.
+
+### Urejanje razvojne skupine
+
+Razvojne skupine lahko po kreiranju tudi urejamo. V orodni vrstici moramo izbrati `Dev team` in nato klikniti na razvojno skupino, katero želimo urejati. Odprejo se nam opis izbrane razvojne skupine. Na desni strani se nahajata gumba za urejanje razvojne skupine in povabitev novega kanban mastra.
+
+### Urejanje imena in vlog v razvojni skupini
+
+Z klikom na gumb `Edit development team` se nam odpre obrazec, v katerem lahko spremenimo ime skupine, product ownerja in dodajamo ali odstranjamo razvijalce. Razvojno skupino je mozno urejati le v okvirju kriterijev, ki so enaki kot ob ustvarjanju nove razvojne skupine. Treba je poskrbeti, da so vse vloge pravilno zastopane. Ob nepravilnem izboru, nas sistem opozori in ne dopusti dokončanja urejanja.
+Urejanje končamo z klikom na gumb `SUBMIT`.
+
+### Urejanje vloge `Kanban Master`
+
+Z klikom na gumb `Invite new Kanban Master` lahko v razvojno skupino povabimo novega `Kanban Mastra`. Ob kliku se nam odpre seznam z možnimi uporabniki, ki so vsposobljeni prevzeti to vlogo. Ko z klikom na gumb `Select` svojo izbiro potrdimo, se izbranemu uporabniku poslje povabilo v razvojno skupino.
