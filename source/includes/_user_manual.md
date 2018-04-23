@@ -88,3 +88,17 @@ Urejanje končamo z klikom na gumb `SUBMIT`.
 ### Urejanje vloge `Kanban Master`
 
 Z klikom na gumb `Invite new Kanban Master` lahko v razvojno skupino povabimo novega `Kanban Mastra`. Ob kliku se nam odpre seznam z možnimi uporabniki, ki so vsposobljeni prevzeti to vlogo. Ko z klikom na gumb `Select` svojo izbiro potrdimo, se izbranemu uporabniku poslje povabilo v razvojno skupino.
+
+
+## Urejanje table
+
+Omogoča kreiranje, urejanje in brisanje table. Te funkcije so na voljo le uporabnikom z vlogo `Kanban Master`.
+
+### Ustvarjanje table
+
+Z obiskom strani `/board` se prikažejo vse table do katerih uporabnik lahko dostopa. Če je uporabnik v vlogi `Kanban Master`, lahko ustvari novo tablo s klikom na gumb `Create`.
+To ga bo preusmerilo na stran `/board-edit`, kjer se bo prikazal seznam z lokalno shranjenimi tabelami. Te tabele se še niso ustvarile v bazi in se hranijo lokalo izključno za urejanje. Ko imamo željeno obliko tabele, s klikom gumb `Create` ustvarimo tabelo.
+
+### Urejanje table
+
+Ustvarjeno tabelo naknadno lahko tudi spreminjamo. Z na strani `/board` klikom na tabelo obiščemo stran `/board/{id_tabele}`, ki vsebuje podrobnosti tabele in hkrati tudi gumb `Edit`, ki je dovoljen uporabniku v vlogi Kanban Mastra. Z klikom na gumb `Edit` obiščemo stran `/board/{id_tabele}/edit`, kjer lahko spreminjamo tabelo. Možno je dodajanje in odvzemanje obstoječih projektov. Dodajamo in spreminjamo lahko tudi stolpce, ki ne vsebujejo kartic.
