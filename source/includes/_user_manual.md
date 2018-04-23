@@ -106,3 +106,7 @@ Ustvarjeno tabelo naknadno lahko tudi spreminjamo. Z na strani `/board` klikom n
 ### Prikaz tabele
 
 Na strani `/board` so prikazane vse tabele dostopne vpisanemu uporabniku. Za bolj podroben pogled lahko uporabnik klikne na željeno tablo, kar ga preusmeri na stran `/board/{id_table}` z podrobnostmi tabela.
+
+### Kopiranje tabele
+
+Ustvarjene tabelo lahko na strani za urejanje `/board/{id_tabele}/edit` kopiramo z klikom na gumb `Copy`, kar bo ustvarilo in preusmerilo uporabnika na novo lokalno tabelo, ki je strukturno enaka.
