@@ -102,3 +102,7 @@ To ga bo preusmerilo na stran `/board-edit`, kjer se bo prikazal seznam z lokaln
 ### Urejanje table
 
 Ustvarjeno tabelo naknadno lahko tudi spreminjamo. Z na strani `/board` klikom na tabelo obiščemo stran `/board/{id_tabele}`, ki vsebuje podrobnosti tabele in hkrati tudi gumb `Edit`, ki je dovoljen uporabniku v vlogi Kanban Mastra. Z klikom na gumb `Edit` obiščemo stran `/board/{id_tabele}/edit`, kjer lahko spreminjamo tabelo. Možno je dodajanje in odvzemanje obstoječih projektov. Dodajamo in spreminjamo lahko tudi stolpce, ki ne vsebujejo kartic.
+
+### Prikaz tabele
+
+Na strani `/board` so prikazane vse tabele dostopne vpisanemu uporabniku. Za bolj podroben pogled lahko uporabnik klikne na željeno tablo, kar ga preusmeri na stran `/board/{id_table}` z podrobnostmi tabela.
