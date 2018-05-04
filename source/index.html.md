@@ -21,8 +21,9 @@ search: true
 
 # Introduction
 
-Dobrodošli v dokumentaciji študijskega sistema. Zaenkrat je tu še vedno referenčna koda slate projekta, ki pa jo bomo
-v kratkem izbrisali (vse do vključno razdelka **Errors**).
+Dobrodošli v dokumentaciji Smrpo7 Kanban sistema.
+
+<!-- comment
 
 Zbiram predloge za tabe na desni. Mislim, da bo JSON tab dovolj, lahko pa še kaj dodamo.
 
@@ -237,3 +238,4 @@ This endpoint deletes a specific kitten.
 Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
+ -->
