@@ -250,6 +250,15 @@
                   <li>
                     <a href="#vzdrzevanje-uporabnikov" class="toc-h2 toc-link" data-title="vzdrzevanje-uporabnikov">Vzdrževanje uporabnikov</a>
                   </li>
+                  <li>
+                    <a href="#vzdrzevanje-projektov" class="toc-h2 toc-link" data-title="vzdrzevanje-projektov">Vzdrževanje projektov</a>
+                  </li>
+                  <li>
+                    <a href="#vzdrzevanje-in-ustvarjanje-novih-razvojnih-skupin" class="toc-h2 toc-link" data-title="vzdrzevanje-in-ustvarjanje-novih-razvojnih-skupin">Vzdrževanje in ustvarjanje novih razvojnih skupin</a>
+                  </li>
+                  <li>
+                    <a href="#urejanje-table" class="toc-h2 toc-link" data-title="urejanje-table">Urejanje table</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -503,32 +512,16 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 <h1 id='navodila-za-uporabo'>Navodila za uporabo</h1>
 <p>V datoteki <code>includes/_user_manual.md</code> se bo pisalo navodila za uporabo.</p>
 <h2 id='vzdrzevanje-uporabnikov'>Vzdrževanje uporabnikov</h2>
-<p>Vzdrževanje uporabnikov se izvaja preko strežnika KeyCloak. Na strežnik se prijavimo preko
-<a href="https://kanban.smrpo7:31337/auth/admin/master/console">URL-ja</a>.</p>
-
-<p>Prijavimo se z računom administratorja (ob namestitvi ga kreiramo na isti strani). Projekt uporablja področje <code>Kis</code>.</p>
+<p>Vzdrževanje uporabnikov se izvaja preko administratorske <a href="https://www.kanban.smrpo7/admin">/admin</a>, ki je na voljo le uporabnikom v vlogi administratorja.</p>
 <h3 id='dodajanje-novega-uporabnika'>Dodajanje novega uporabnika</h3>
-<p>Novega uporabnika dodamo tako, da v levem meniju izberemo <code>Manage &gt; Users</code> in kliknemo na gumb <code>Add user</code>. Prikažejo se
-vnosna polja, kamor vnesemo podatke uporabnika. Vnos potrdimo s klikom na gumb <code>Save</code>. Nastavljanje gesla in upravljanje
-pravic je opisano v nadaljnjih poglavjih.</p>
+<p>Na administrativni strani <code>/admin</code> s klikom na gumb create administrator lahko ustvari novega uporabnika.</p>
 <h3 id='pregled-uporabnikov'>Pregled uporabnikov</h3>
-<p>Seznam uporabnikov lahko pregledujemo tako, da v levem meniju izberemo <code>Manage &gt; Users</code> in kliknemo gumb
-<code>View all users</code>. Prikaže se seznam vseh uporabnikov. Podrobnosti uporabnika lahko urejamo s klikom na uporabnikov ID.</p>
+<p>Administratorju je omogočeno pregledovanje in iskanje vseh uporabnikov. 
+Išče lahko po ključni besedi z iskalnim poljem, hkrati lahko išče tudi po statusu aktivnosti z klikom na okno Deleted.</p>
 <h3 id='dodajanje-ali-spreminjanje-gesla'>Dodajanje ali spreminjanje gesla</h3>
-<p>Geslo uporabnika lahko urejamo tako, da v pregledu uporabnika izberemo zavihek <code>Credentials</code>. Novo geslo vpišemo v
-vnosna polja. Če je stikalo <code>Temporary</code> vklopljeno, bo moral uporabnik ob prvi prijavi geslo spremeniti. Spremembe
-shranimo s klikom na gumb <code>Reset password</code>.</p>
+<p>Administrator lahko ponastavi geslo z klikom na gumb <code>Set password</code>, ki se nahaja v oknu s podrobnostmi uporabnika.</p>
 <h3 id='upravljanje-s-pravicami-uporabnika'>Upravljanje s pravicami uporabnika</h3>
-<p>Sistem uporablja vloge za upravljanje s pravicami. Pravice uporabnika lahko urejamo v zavihku <code>Role Mappings</code> ob
-pregledovanju uporabnika. Tu lahko uporabniku dodelimo ali odstranjujemo vloge.</p>
-
-<p>Za dodelitev vloge v oknu <code>Available Roles</code> izberemo vlogo, ki jo želimo dodati uporabniku, in kliknemo gumb
-<code>Add selected</code>.</p>
-
-<p>Za odstranitev vloge v oknu <code>Assigned Roles</code> izberemo vlogo, ki jo želimo odstraniti, in kliknemo na gumb
-<code>Remove selected</code>.</p>
-
-<p>Uporabniku lahko dodelimo naslednje vloge:</p>
+<p>Administrator ob ustvarjanju ali ob urejanju uporabniškega profila lahko nastavlja vloge v katerih uporabnik nastopa.</p>
 
 <table><thead>
 <tr>
@@ -554,8 +547,57 @@ pregledovanju uporabnika. Tu lahko uporabniku dodelimo ali odstranjujemo vloge.<
 </tr>
 </tbody></table>
 <h3 id='onemogocanje-uporabniskega-racuna'>Onemogočanje uporabniškega računa</h3>
-<p>Uporabniški račun lahko omogočimo tako, da v pregledu uporabnika izberemo zavihek <code>Details</code>. Stikalo <code>User Enabled</code>
-izklopimo in kliknemo na gumb <code>Save</code>. Na podoben način lahko uporabnika omogočimo nazaj.</p>
+<p>Administrator lahko s klikom na gumb <code>Deactivate</code> na oknu z uporabniškimi podrobnostmi onemogoči uporabniški račun. 
+Ponovno ga nato lahko aktivira s klikom na gumb <code>Activate</code>.</p>
+<h3 id='vpis-uporabnikov-v-sistem'>Vpis uporabnikov v sistem</h3>
+<p>Uporabniki se lahko vpisujejo v sistem preko uporabniškega imena ali elektronske pošte. Če uporabnik napačno vnese geslo 3 krat zapored se račun začasno blokira za 10 sekund, kar se nato povečuje z dodatnimi poskusi vnosa napačnega gesla.</p>
+<h2 id='vzdrzevanje-projektov'>Vzdrževanje projektov</h2>
+<p>Omogoča kreiranje, urejanje in brisanje projektov. Te funkcije so na voljo le uporabnikom z vlogo <code>Kanban Master</code>. </p>
+<h3 id='kreiranje-novega-projekta'>Kreiranje novega projekta</h3>
+<p>Do obrazca za kreiranje projektov pridemo tako, da v orodni vrstici izberemo <code>Projects</code> in nato kliknemo gumb <code>Create project</code>. 
+V obrazec moramo vnesti ime projekta, naročnika, datum začetka in konca ter iz seznama izbrati razvojno ekipo. 
+Pri izpolnjevanju moramo upoštevati naslednje omejitve:</p>
+
+<ul>
+<li>datum pričetka mora biti manjši ali enak trenutnemu</li>
+<li>datum zaključka mora biti večji od trenutnega datuma</li>
+<li>predvideni datum zaključka mora biti večji od datuma pričetka</li>
+</ul>
+
+<p>Po končanem vnosu podatkov, kliknemo gumb <code>Submit</code>. Če so bili vsi podatki pravilno vnešeni in omejitve upoštevane, se projekt ustvari. V nasprotnem primeru se nam prikaže opozorilo, ki nam pove, katera polja so bila napačno vnešena.</p>
+<h3 id='urejanje-projekta'>Urejanje projekta</h3>
+<p>Projekte lahko po kreiranju tudi urejamo. V orodni vrstici moramo izbrati <code>Projects</code> in nato klikniti na projekt, ki ga želimo urediti. Odprejo se nam podrobne informacije, pod katerimi se nahaja gumb <code>Edit</code>. Ob kliku na ta gumb se nam odpre obrazec za urejanje. Uredimo lahko enaka polja kot pri kreiranju, pri čemer moramo upoštevati zgoraj omenjene omejitve. V primeru, da smo na projektu že začeli z delom in smo mu že določili kartice, datuma začetka ne moramo več spreminjati.</p>
+<h3 id='brisanje-projekta'>Brisanje projekta</h3>
+<p>Če želimo projekt izbrisati, moramo v orodni vrstici izbrati <code>Projects</code>, klikniti na projekt, ki ga želimo izbrisati in klikniti na gumb <code>Delete</code>. Pojavi se nam potrditveno okno, kjer ponovno kliknemo <code>Delete</code> in s tem izbrišemo projekt.</p>
+<h2 id='vzdrzevanje-in-ustvarjanje-novih-razvojnih-skupin'>Vzdrževanje in ustvarjanje novih razvojnih skupin</h2>
+<p>Omogoča kreiranje, urejanje in vpogled v razvojne skupine. Ustvarjanje in urejanje je omogočeno le uporabniku z vlogo <code>Kanban Master</code>. Do strani z pregledom nad razvojnimi skupinami [/dev-team] pridemo tako, da v orodoni vrstici kliknemo na gumb <code>Dev team</code></p>
+<h3 id='kreiranje-novege-razvojne-skupine'>Kreiranje novege razvojne skupine</h3>
+<p>Do obrazca za kreiranje razvojne skupine pridemo tako, da kliknemo gumb <code>Create project</code>, ki se nahaja na strani [/dev-team]. V obrazec moramo vnesti ime razvojne skupine, naročnika, ter iz seznama izbrati razvijalce. Pri izpolnjevanju moramo upoštevati naslednje omejitve:</p>
+
+<ul>
+<li><code>Kanban Master</code> je vedno uporabnik ki ustvarja razvojno skupino (Kasneje lahko v vlogo povabi drugega uporabnika).</li>
+<li>Povabiti mora enega ali več razvijalcev</li>
+</ul>
+
+<p>Po končanem vnosu podatkov, kliknemo gumb <code>Submit</code>. Če so bili vsi podatki pravilno vnešeni in omejitve upoštevane, se razvojna skupina ustvari. V nasprotnem primeru se nam prikaže opozorilo, ki nam pove, katera polja so bila napačno vnešena.</p>
+<h3 id='urejanje-razvojne-skupine'>Urejanje razvojne skupine</h3>
+<p>Razvojne skupine lahko po kreiranju tudi urejamo. V orodni vrstici moramo izbrati <code>Dev team</code> in nato klikniti na razvojno skupino, katero želimo urejati. Odprejo se nam opis izbrane razvojne skupine. Na desni strani se nahajata gumba za urejanje razvojne skupine in povabitev novega kanban mastra.</p>
+<h3 id='urejanje-imena-in-vlog-v-razvojni-skupini'>Urejanje imena in vlog v razvojni skupini</h3>
+<p>Z klikom na gumb <code>Edit development team</code> se nam odpre obrazec, v katerem lahko spremenimo ime skupine, product ownerja in dodajamo ali odstranjamo razvijalce. Razvojno skupino je mozno urejati le v okvirju kriterijev, ki so enaki kot ob ustvarjanju nove razvojne skupine. Treba je poskrbeti, da so vse vloge pravilno zastopane. Ob nepravilnem izboru, nas sistem opozori in ne dopusti dokončanja urejanja.
+Urejanje končamo z klikom na gumb <code>SUBMIT</code>.</p>
+<h3 id='urejanje-vloge-kanban-master'>Urejanje vloge <code>Kanban Master</code></h3>
+<p>Z klikom na gumb <code>Invite new Kanban Master</code> lahko v razvojno skupino povabimo novega <code>Kanban Mastra</code>. Ob kliku se nam odpre seznam z možnimi uporabniki, ki so vsposobljeni prevzeti to vlogo. Ko z klikom na gumb <code>Select</code> svojo izbiro potrdimo, se izbranemu uporabniku poslje povabilo v razvojno skupino.</p>
+<h2 id='urejanje-table'>Urejanje table</h2>
+<p>Omogoča kreiranje, urejanje in brisanje table. Te funkcije so na voljo le uporabnikom z vlogo <code>Kanban Master</code>.</p>
+<h3 id='ustvarjanje-table'>Ustvarjanje table</h3>
+<p>Z obiskom strani <code>/board</code> se prikažejo vse table do katerih uporabnik lahko dostopa. Če je uporabnik v vlogi <code>Kanban Master</code>, lahko ustvari novo tablo s klikom na gumb <code>Create</code>.
+To ga bo preusmerilo na stran <code>/board-edit</code>, kjer se bo prikazal seznam z lokalno shranjenimi tabelami. Te tabele se še niso ustvarile v bazi in se hranijo lokalo izključno za urejanje. Ko imamo željeno obliko tabele, s klikom gumb <code>Create</code> ustvarimo tabelo.</p>
+<h3 id='urejanje-table-2'>Urejanje table</h3>
+<p>Ustvarjeno tabelo naknadno lahko tudi spreminjamo. Z na strani <code>/board</code> klikom na tabelo obiščemo stran <code>/board/{id_tabele}</code>, ki vsebuje podrobnosti tabele in hkrati tudi gumb <code>Edit</code>, ki je dovoljen uporabniku v vlogi Kanban Mastra. Z klikom na gumb <code>Edit</code> obiščemo stran <code>/board/{id_tabele}/edit</code>, kjer lahko spreminjamo tabelo. Možno je dodajanje in odvzemanje obstoječih projektov. Dodajamo in spreminjamo lahko tudi stolpce, ki ne vsebujejo kartic.</p>
+<h3 id='prikaz-tabele'>Prikaz tabele</h3>
+<p>Na strani <code>/board</code> so prikazane vse tabele dostopne vpisanemu uporabniku. Za bolj podroben pogled lahko uporabnik klikne na željeno tablo, kar ga preusmeri na stran <code>/board/{id_table}</code> z podrobnostmi tabela.</p>
+<h3 id='kopiranje-tabele'>Kopiranje tabele</h3>
+<p>Ustvarjene tabelo lahko na strani za urejanje <code>/board/{id_tabele}/edit</code> kopiramo z klikom na gumb <code>Copy</code>, kar bo ustvarilo in preusmerilo uporabnika na novo lokalno tabelo, ki je strukturno enaka.</p>
 <h1 id='dokumentacija-api'>Dokumentacija API</h1>
 <p>V datoteki <code>includes/_api_doc.md</code> se bo pisalo dokumentacijo REST endpoint-ov.</p>
 
