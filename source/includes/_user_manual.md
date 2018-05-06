@@ -110,3 +110,10 @@ Na strani `/board` so prikazane vse tabele dostopne vpisanemu uporabniku. Za bol
 ### Kopiranje tabele
 
 Ustvarjene tabelo lahko na strani za urejanje `/board/{id_tabele}/edit` kopiramo z klikom na gumb `Copy`, kar bo ustvarilo in preusmerilo uporabnika na novo lokalno tabelo, ki je strukturno enaka.
+
+## Premiki kartic
+
+Kartice je mozno premikati za eno polje levo ali desno. Premiki kartic so odvisni od uporabniških vlog. 
+Razvijalci lahko premikajo le kartice, ki so eno polje pred začetekom razvoja in vse do enega polja po koncu razvoja.
+Naročnik lahko premika le kartice levo in vključno z stolpcem najvišje prioritete. Hkrati lahko premika tudi kartice desno in vključno z stolpcem sprejemni test. V stolpcu sprejemni testi lahko tudi kartico zavrže in premakne pred stolpec z najvišjo prioriteto.
+Kanban master lahko premika po vseh stolpcih razen stolpcih desno od sprejemnih testov.
