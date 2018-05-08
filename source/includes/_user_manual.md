@@ -4,7 +4,7 @@ V datoteki `includes/_user_manual.md` se bo pisalo navodila za uporabo.
 
 ## Vzdrževanje uporabnikov
 
-Vzdrževanje uporabnikov se izvaja preko administratorske [/admin](https://www.kanban.smrpo7/admin), ki je na voljo le uporabnikom v vlogi administratorja.
+Vzdrževanje uporabnikov se izvaja preko administratorske [/admin](http://http://localhost:4200/admin), ki je na voljo le uporabnikom v vlogi administratorja.
 
 ### Dodajanje novega uporabnika
 
@@ -103,13 +103,13 @@ To ga bo preusmerilo na stran `/board-edit`, kjer se bo prikazal seznam z lokaln
 
 Ustvarjeno tabelo naknadno lahko tudi spreminjamo. Z na strani `/board` klikom na tabelo obiščemo stran `/board/{id_tabele}`, ki vsebuje podrobnosti tabele in hkrati tudi gumb `Edit`, ki je dovoljen uporabniku v vlogi Kanban Mastra. Z klikom na gumb `Edit` obiščemo stran `/board/{id_tabele}/edit`, kjer lahko spreminjamo tabelo. Možno je dodajanje in odvzemanje obstoječih projektov. Dodajamo in spreminjamo lahko tudi stolpce, ki ne vsebujejo kartic.
 
-### Prikaz tabele
+### Prikaz table
 
-Na strani `/board` so prikazane vse tabele dostopne vpisanemu uporabniku. Za bolj podroben pogled lahko uporabnik klikne na željeno tablo, kar ga preusmeri na stran `/board/{id_table}` z podrobnostmi tabela.
+Na strani `/board` so prikazane vse table dostopne vpisanemu uporabniku. Za bolj podroben pogled lahko uporabnik klikne na željeno tablo, kar ga preusmeri na stran `/board/{id_table}` z podrobnostmi table.
 
-### Kopiranje tabele
+### Kopiranje table
 
-Ustvarjene tabelo lahko na strani za urejanje `/board/{id_tabele}/edit` kopiramo z klikom na gumb `Copy`, kar bo ustvarilo in preusmerilo uporabnika na novo lokalno tabelo, ki je strukturno enaka.
+Ustvarjene tabelo lahko na strani za urejanje `/board/{id_tabele}/edit` kopiramo z klikom na gumb `Copy`, kar bo ustvarilo in preusmerilo uporabnika na novo lokalno tablo, ki je strukturno enaka.
 
 ## Premiki kartic
 
@@ -117,3 +117,24 @@ Kartice je mozno premikati za eno polje levo ali desno. Premiki kartic so odvisn
 Razvijalci lahko premikajo le kartice, ki so eno polje pred začetekom razvoja in vse do enega polja po koncu razvoja.
 Naročnik lahko premika le kartice levo in vključno z stolpcem najvišje prioritete. Hkrati lahko premika tudi kartice desno in vključno z stolpcem sprejemni test. V stolpcu sprejemni testi lahko tudi kartico zavrže in premakne pred stolpec z najvišjo prioriteto.
 Kanban master lahko premika po vseh stolpcih razen stolpcih desno od sprejemnih testov.
+
+##Ustvarjanje navadnih kartic
+
+Kartice predstavljajo naloge, ki jih je za realizacijo projekta potrebno narediti. Kartice lahko ustvarja uporabnik v vlogi `Product Owner`ja, na projektu kjer zastopa to vlogo. Kartice ustvarja preko gumba Create card, ki se nahaja na strani s podrobnostmi določenega projekta `project/projectID` (preko navigacijskega gumba `Project->izbira_projekta`). S klikom na gumb `Create card` se odpre formular za ustvarjanje kartice. 
+
+Kartica mora obvezno vsebovati naslednje parametre:
+- ime 
+- opis
+- barvo
+
+##Ustvarjanje Kartice `Silver Bullet`
+
+V nasprotju z normalnimi karticami, predstavlja "Silver Bullet" kartico z nujno zahtevo. Takšno kartico lahko ustvari le uporabnik v vlogi `Kanban Master`. Ustvari jo preko gumba Create card, ki se nahaja na strani s podrobnostmi določenega projekta  [/project](http://http://localhost:4200/project) (dostopno preko navigacijskega gumba `Project->izbira_projekta`). S klikom na gumb `Create card` se odpre formular za ustvarjanje kartice. 
+
+Kartica mora obvezno vsebovati naslednja parametra:
+- ime 
+- opis
+Barva kartice je privzeta.
+
+##Posodabljanje vsebine Kartice
+
