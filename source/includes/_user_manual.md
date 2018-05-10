@@ -13,7 +13,7 @@ Na administrativni strani `/admin` s klikom na gumb create administrator lahko u
 
 ## Pregled uporabnikov
 
-Administratorju je omogočeno pregledovanje in iskanje vseh uporabnikov. 
+Administratorju je omogočeno pregledovanje in iskanje vseh uporabnikov.
 Išče lahko po ključni besedi z iskalnim poljem, hkrati lahko išče tudi po statusu aktivnosti z klikom na okno Deleted.
 
 ## Dodajanje ali spreminjanje gesla
@@ -33,7 +33,7 @@ PRODUCT_OWNER | Uporabnik, ki je usposobljen za vlogo Product Owner-ja
 
 ## Onemogočanje uporabniškega računa
 
-Administrator lahko s klikom na gumb `Deactivate` na oknu z uporabniškimi podrobnostmi onemogoči uporabniški račun. 
+Administrator lahko s klikom na gumb `Deactivate` na oknu z uporabniškimi podrobnostmi onemogoči uporabniški račun.
 Ponovno ga nato lahko aktivira s klikom na gumb `Activate`.
 
 ## Vpis uporabnikov v sistem
@@ -42,12 +42,12 @@ Uporabniki se lahko vpisujejo v sistem preko uporabniškega imena ali elektronsk
 
 # Vzdrževanje projektov
 
-Omogoča kreiranje, urejanje in brisanje projektov. Te funkcije so na voljo le uporabnikom z vlogo `Kanban Master`. 
+Omogoča kreiranje, urejanje in brisanje projektov. Te funkcije so na voljo le uporabnikom z vlogo `Kanban Master`.
 
 ## Kreiranje novega projekta
 
-Do obrazca za kreiranje projektov pridemo tako, da v orodni vrstici izberemo `Projects` in nato kliknemo gumb `Create project`. 
-V obrazec moramo vnesti ime projekta, naročnika, datum začetka in konca ter iz seznama izbrati razvojno ekipo. 
+Do obrazca za kreiranje projektov pridemo tako, da v orodni vrstici izberemo `Projects` in nato kliknemo gumb `Create project`.
+V obrazec moramo vnesti ime projekta, naročnika, datum začetka in konca ter iz seznama izbrati razvojno ekipo.
 Pri izpolnjevanju moramo upoštevati naslednje omejitve:
 
 - datum pričetka mora biti manjši ali enak trenutnemu
@@ -118,7 +118,7 @@ Kartice predstavljajo naloge, ki jih je za realizacijo projekta treba narediti. 
 
 ##Ustvarjanje kartic
 
-Navadne artice lahko ustvarja uporabnik v vlogi `Product Owner`ja, na projektu kjer zastopa to vlogo. Kartice ustvarja preko gumba `Create card`, ki se nahaja na strani s podrobnostmi določenega projekta `project/projectID` (dostopno preko navigacijskega gumba `Project` -> izbira_projekta). S klikom na gumb `Create card` se odpre formular za ustvarjanje kartice. 
+Navadne artice lahko ustvarja uporabnik v vlogi `Product Owner`ja, na projektu kjer zastopa to vlogo. Kartice ustvarja preko gumba `Create card`, ki se nahaja na strani s podrobnostmi določenega projekta `project/projectID` (dostopno preko navigacijskega gumba `Project` -> izbira_projekta). S klikom na gumb `Create card` se odpre formular za ustvarjanje kartice.
 
 Kartica mora obvezno vsebovati naslednje parametre:
 
@@ -131,7 +131,7 @@ barva | barva kartice, ki bo vidna na tabli
 
 ##Ustvarjanje Kartice "Silver Bullet""
 
-V nasprotju z normalnimi karticami, predstavlja "Silver Bullet" kartico z nujno zahtevo. Takšno kartico lahko ustvari le uporabnik v vlogi `Kanban Master`. Ustvari jo preko gumba `Create card`, ki se nahaja na strani s podrobnostmi določenega projekta  `/project/id-projekta` (dostopno preko navigacijskega gumba `Project->izbira_projekta`). S klikom na gumb `Create card` se odpre formular za ustvarjanje kartice. 
+V nasprotju z normalnimi karticami, predstavlja "Silver Bullet" kartico z nujno zahtevo. Takšno kartico lahko ustvari le uporabnik v vlogi `Kanban Master`. Ustvari jo preko gumba `Create card`, ki se nahaja na strani s podrobnostmi določenega projekta  `/project/id-projekta` (dostopno preko navigacijskega gumba `Project->izbira_projekta`). S klikom na gumb `Create card` se odpre formular za ustvarjanje kartice.
 
 Kartica mora obvezno vsebovati naslednja parametra:
 
@@ -155,7 +155,7 @@ Posodabljanje kartic ima naslednje omejitve:
 
 ## Premiki kartic
 
-Kartice je mozno premikati za eno polje levo ali desno. Premiki kartic so odvisni od uporabniških vlog. 
+Kartice je mozno premikati za eno polje levo ali desno. Premiki kartic so odvisni od uporabniških vlog.
 
 Razvijalec `Developer` lahko premika le kartice, ki so eno polje pred začetekom razvoja in vse do enega polja po koncu razvoja.
 
@@ -164,4 +164,13 @@ Vloga | Premiki
 `ProductOwner` | lahko premika le kartice, ki se nahajajo levo od ali so v stolpcu z najvišjo prioriteto. Hkrati lahko premika tudi kartice, ki se nahajajo desno ali pa so v stolpcu sprejemni test. <br> S klikom na gumb `Reject`, ki je viden pri karticah, ki se nahajajo v stolpcu z sprejemnimi testi, lahko kartico zavrne in pošlje nazaj pred zacetek razvoja.
 `Kanban master` | lahko premika po vseh stolpcih razen stolpcih desno od sprejemnih testov.
 
+## Prikaz podrobnosti kartice
 
+Podrobnosti kartice lahko vidimo na strani `/card/{id_kartice}`. Do strani lahko pridemo s klikom na ime kartice v
+prikazu tabele. Do strani lahko dostopamu tudi tako, da kliknemo na kartico v seznamu kartic na strani, ki prikazuje
+podrobnosti projekta.
+
+Na strani s prikazom podrobnosti kartice lahko vidimo njeno ime, oceno zahtevnosti, opis in njene podnaloge. Poleg tega
+lahko vidimo zgodovino premikanja kartice. V zgodovini premikanja kartic so posebej označeni premiki kartic, kjer je
+bila omejitev WIP prekršena. Tu so vidne tudi kršitve omejitev WIP, ko je bil maksimalni WIP stolpca zmanjšan tako, da
+je bil trenutni WIP presežen.
