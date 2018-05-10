@@ -313,6 +313,9 @@
                   <li>
                     <a href="#premiki-kartic" class="toc-h2 toc-link" data-title="premiki-kartic">Premiki kartic</a>
                   </li>
+                  <li>
+                    <a href="#prikaz-podrobnosti-kartice" class="toc-h2 toc-link" data-title="prikaz-podrobnosti-kartice">Prikaz podrobnosti kartice</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -577,7 +580,7 @@ Error Code | Meaning
 <h2 id='dodajanje-novega-uporabnika'>Dodajanje novega uporabnika</h2>
 <p>Na administrativni strani <code>/admin</code> s klikom na gumb create administrator lahko ustvari novega uporabnika.</p>
 <h2 id='pregled-uporabnikov'>Pregled uporabnikov</h2>
-<p>Administratorju je omogočeno pregledovanje in iskanje vseh uporabnikov. 
+<p>Administratorju je omogočeno pregledovanje in iskanje vseh uporabnikov.
 Išče lahko po ključni besedi z iskalnim poljem, hkrati lahko išče tudi po statusu aktivnosti z klikom na okno Deleted.</p>
 <h2 id='dodajanje-ali-spreminjanje-gesla'>Dodajanje ali spreminjanje gesla</h2>
 <p>Administrator lahko ponastavi geslo z klikom na gumb <code>Set password</code>, ki se nahaja v oknu s podrobnostmi uporabnika.</p>
@@ -608,15 +611,15 @@ Išče lahko po ključni besedi z iskalnim poljem, hkrati lahko išče tudi po s
 </tr>
 </tbody></table>
 <h2 id='onemogocanje-uporabniskega-racuna'>Onemogočanje uporabniškega računa</h2>
-<p>Administrator lahko s klikom na gumb <code>Deactivate</code> na oknu z uporabniškimi podrobnostmi onemogoči uporabniški račun. 
+<p>Administrator lahko s klikom na gumb <code>Deactivate</code> na oknu z uporabniškimi podrobnostmi onemogoči uporabniški račun.
 Ponovno ga nato lahko aktivira s klikom na gumb <code>Activate</code>.</p>
 <h2 id='vpis-uporabnikov-v-sistem'>Vpis uporabnikov v sistem</h2>
 <p>Uporabniki se lahko vpisujejo v sistem preko uporabniškega imena ali elektronske pošte. Če uporabnik napačno vnese geslo 3 krat zapored se račun začasno blokira za 10 sekund, kar se nato povečuje z dodatnimi poskusi vnosa napačnega gesla.</p>
 <h1 id='vzdrzevanje-projektov'>Vzdrževanje projektov</h1>
-<p>Omogoča kreiranje, urejanje in brisanje projektov. Te funkcije so na voljo le uporabnikom z vlogo <code>Kanban Master</code>. </p>
+<p>Omogoča kreiranje, urejanje in brisanje projektov. Te funkcije so na voljo le uporabnikom z vlogo <code>Kanban Master</code>.</p>
 <h2 id='kreiranje-novega-projekta'>Kreiranje novega projekta</h2>
-<p>Do obrazca za kreiranje projektov pridemo tako, da v orodni vrstici izberemo <code>Projects</code> in nato kliknemo gumb <code>Create project</code>. 
-V obrazec moramo vnesti ime projekta, naročnika, datum začetka in konca ter iz seznama izbrati razvojno ekipo. 
+<p>Do obrazca za kreiranje projektov pridemo tako, da v orodni vrstici izberemo <code>Projects</code> in nato kliknemo gumb <code>Create project</code>.
+V obrazec moramo vnesti ime projekta, naročnika, datum začetka in konca ter iz seznama izbrati razvojno ekipo.
 Pri izpolnjevanju moramo upoštevati naslednje omejitve:</p>
 
 <ul>
@@ -662,7 +665,7 @@ To ga bo preusmerilo na stran <code>/board-edit</code>, kjer se bo prikazal sezn
 <h1 id='kartice'>Kartice</h1>
 <p>Kartice predstavljajo naloge, ki jih je za realizacijo projekta treba narediti. Kartice so dveh vrst, navadne in z Ćvišjo prioriteto&quot; <code>(Silver Bullet)</code></p>
 <h2 id='ustvarjanje-kartic'>Ustvarjanje kartic</h2>
-<p>Navadne artice lahko ustvarja uporabnik v vlogi <code>Product Owner</code>ja, na projektu kjer zastopa to vlogo. Kartice ustvarja preko gumba <code>Create card</code>, ki se nahaja na strani s podrobnostmi določenega projekta <code>project/projectID</code> (dostopno preko navigacijskega gumba <code>Project</code> -&gt; izbira_projekta). S klikom na gumb <code>Create card</code> se odpre formular za ustvarjanje kartice. </p>
+<p>Navadne artice lahko ustvarja uporabnik v vlogi <code>Product Owner</code>ja, na projektu kjer zastopa to vlogo. Kartice ustvarja preko gumba <code>Create card</code>, ki se nahaja na strani s podrobnostmi določenega projekta <code>project/projectID</code> (dostopno preko navigacijskega gumba <code>Project</code> -&gt; izbira_projekta). S klikom na gumb <code>Create card</code> se odpre formular za ustvarjanje kartice.</p>
 
 <p>Kartica mora obvezno vsebovati naslednje parametre:</p>
 
@@ -690,7 +693,7 @@ To ga bo preusmerilo na stran <code>/board-edit</code>, kjer se bo prikazal sezn
 </tr>
 </tbody></table>
 <h2 id='ustvarjanje-kartice-quot-silver-bullet-quot-quot'>Ustvarjanje Kartice &quot;Silver Bullet&quot;&quot;</h2>
-<p>V nasprotju z normalnimi karticami, predstavlja &quot;Silver Bullet&quot; kartico z nujno zahtevo. Takšno kartico lahko ustvari le uporabnik v vlogi <code>Kanban Master</code>. Ustvari jo preko gumba <code>Create card</code>, ki se nahaja na strani s podrobnostmi določenega projekta  <code>/project/id-projekta</code> (dostopno preko navigacijskega gumba <code>Project-&gt;izbira_projekta</code>). S klikom na gumb <code>Create card</code> se odpre formular za ustvarjanje kartice. </p>
+<p>V nasprotju z normalnimi karticami, predstavlja &quot;Silver Bullet&quot; kartico z nujno zahtevo. Takšno kartico lahko ustvari le uporabnik v vlogi <code>Kanban Master</code>. Ustvari jo preko gumba <code>Create card</code>, ki se nahaja na strani s podrobnostmi določenega projekta  <code>/project/id-projekta</code> (dostopno preko navigacijskega gumba <code>Project-&gt;izbira_projekta</code>). S klikom na gumb <code>Create card</code> se odpre formular za ustvarjanje kartice.</p>
 
 <p>Kartica mora obvezno vsebovati naslednja parametra:</p>
 
@@ -729,7 +732,7 @@ To ga bo preusmerilo na stran <code>/board-edit</code>, kjer se bo prikazal sezn
 <li>Po izstopu iz mejnega stolpca je posodabljanje onemogočeno.</li>
 </ol>
 <h2 id='premiki-kartic'>Premiki kartic</h2>
-<p>Kartice je mozno premikati za eno polje levo ali desno. Premiki kartic so odvisni od uporabniških vlog. </p>
+<p>Kartice je mozno premikati za eno polje levo ali desno. Premiki kartic so odvisni od uporabniških vlog.</p>
 
 <p>Razvijalec <code>Developer</code> lahko premika le kartice, ki so eno polje pred začetekom razvoja in vse do enega polja po koncu razvoja.</p>
 
@@ -748,6 +751,15 @@ To ga bo preusmerilo na stran <code>/board-edit</code>, kjer se bo prikazal sezn
 <td>lahko premika po vseh stolpcih razen stolpcih desno od sprejemnih testov.</td>
 </tr>
 </tbody></table>
+<h2 id='prikaz-podrobnosti-kartice'>Prikaz podrobnosti kartice</h2>
+<p>Podrobnosti kartice lahko vidimo na strani <code>/card/{id_kartice}</code>. Do strani lahko pridemo s klikom na ime kartice v
+prikazu tabele. Do strani lahko dostopamu tudi tako, da kliknemo na kartico v seznamu kartic na strani, ki prikazuje
+podrobnosti projekta.</p>
+
+<p>Na strani s prikazom podrobnosti kartice lahko vidimo njeno ime, oceno zahtevnosti, opis in njene podnaloge. Poleg tega
+lahko vidimo zgodovino premikanja kartice. V zgodovini premikanja kartic so posebej označeni premiki kartic, kjer je
+bila omejitev WIP prekršena. Tu so vidne tudi kršitve omejitev WIP, ko je bil maksimalni WIP stolpca zmanjšan tako, da
+je bil trenutni WIP presežen.</p>
 <h1 id='dokumentacija-api'>Dokumentacija API</h1>
 <p>V datoteki <code>includes/_api_doc.md</code> se bo pisalo dokumentacijo REST endpoint-ov.</p>
 
