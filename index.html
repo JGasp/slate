@@ -222,7 +222,7 @@
         <ul class="search-results"></ul>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Uvod</a>
+            <a href="#uvod" class="toc-h1 toc-link" data-title="uvod">Uvod</a>
           </li>
           <li>
             <a href="#navodila-za-uporabo" class="toc-h1 toc-link" data-title="navodila-za-uporabo">Navodila za uporabo</a>
@@ -330,7 +330,7 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Uvod</h1>
+        <h1 id='uvod'>Uvod</h1>
 <p>Dobrodošli v dokumentaciji Smrpo7 Kanban sistema.</p>
 
 <!-- comment
@@ -577,15 +577,46 @@ Error Code | Meaning
 <p>V datoteki <code>includes/_user_manual.md</code> se bo pisalo navodila za uporabo.</p>
 <h1 id='vzdrzevanje-uporabnikov'>Vzdrževanje uporabnikov</h1>
 <p>Vzdrževanje uporabnikov se izvaja preko administratorske <a href="http://http//localhost:4200/admin">/admin</a>, ki je na voljo le uporabnikom v vlogi administratorja.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="images/admin.png" alt="alter text" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><em>Administratorska stran <code>/admin</code></em></td>
+</tr>
+</tbody></table>
 <h2 id='dodajanje-novega-uporabnika'>Dodajanje novega uporabnika</h2>
-<p>Na administrativni strani <code>/admin</code> s klikom na gumb create administrator lahko ustvari novega uporabnika.</p>
+<p>Na administrativni strani <code>/admin</code> s klikom na gumb <code>create</code>, administrator lahko ustvari novega uporabnika.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="images/createUserForm.png" alt="alter text" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><em>Obrazec za dodajanje novega uporabnika. Vsi podatki so obvezni.</em></td>
+</tr>
+</tbody></table>
 <h2 id='pregled-uporabnikov'>Pregled uporabnikov</h2>
-<p>Administratorju je omogočeno pregledovanje in iskanje vseh uporabnikov.
-Išče lahko po ključni besedi z iskalnim poljem, hkrati lahko išče tudi po statusu aktivnosti z klikom na okno Deleted.</p>
+<p>Administratorju je omogočeno pregledovanje in iskanje vseh uporabnikov. Na administrativni strani <code>/admin</code> lahko administrator pregleda ustvarjene uporabnike.
+Išče lahko po ključni besedi z iskalnim poljem, hkrati lahko išče tudi po statusu aktivnosti z klikom na okno Deleted. Za izpis podrobnosti je treba z klikom miške izbrati željenega uporabnika.
+Z izbiro uporabnika se izpišejo njegove podrobnosti in njegove možne vloge. Rdeča barva pomeni da uporabnik nima te vloge.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="images/adminPage.png" alt="alter text" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><em>Prikaz izpisa za uporabnika <code>dev@test2</code></em></td>
+</tr>
+</tbody></table>
 <h2 id='dodajanje-ali-spreminjanje-gesla'>Dodajanje ali spreminjanje gesla</h2>
-<p>Administrator lahko ponastavi geslo z klikom na gumb <code>Set password</code>, ki se nahaja v oknu s podrobnostmi uporabnika.</p>
+<p>Administrator lahko ponastavi geslo z klikom na gumb <code>Set password</code>, ki se nahaja v oknu s podrobnostmi uporabnika. Geslo mora vsebovati osem znakov, ki morajo vključevati vsaj eno število in eno črko.</p>
 <h2 id='upravljanje-s-pravicami-uporabnika'>Upravljanje s pravicami uporabnika</h2>
-<p>Administrator ob ustvarjanju ali ob urejanju uporabniškega profila lahko nastavlja vloge v katerih uporabnik nastopa.</p>
+<p>Administrator ob ustvarjanju ali ob urejanju uporabniškega profila preko gumba <code>Edit</code>, lahko nastavlja vloge v katerih uporabnik nastopa.</p>
 
 <table><thead>
 <tr>
@@ -614,9 +645,39 @@ Išče lahko po ključni besedi z iskalnim poljem, hkrati lahko išče tudi po s
 <p>Administrator lahko s klikom na gumb <code>Deactivate</code> na oknu z uporabniškimi podrobnostmi onemogoči uporabniški račun.
 Ponovno ga nato lahko aktivira s klikom na gumb <code>Activate</code>.</p>
 <h2 id='vpis-uporabnikov-v-sistem'>Vpis uporabnikov v sistem</h2>
-<p>Uporabniki se lahko vpisujejo v sistem preko uporabniškega imena ali elektronske pošte. Če uporabnik napačno vnese geslo 3 krat zapored se račun začasno blokira za 10 sekund, kar se nato povečuje z dodatnimi poskusi vnosa napačnega gesla.</p>
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="images/login.png" alt="alter text" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><em>Prikaz strani <code>dashboard</code></em></td>
+</tr>
+</tbody></table>
+
+<p>Uporabniki se lahko vpisujejo v sistem na strani <code>dashboard</code> preko gumba <code>Log in</code>. Ta jih preusmeri na prijavno okno, kjer vpišejo svoje uporabniško ime ali elektronsko pošto in geslo. Če uporabnik napačno vnese geslo tri krat zapored se račun začasno blokira za 10 sekund, kar se nato povečuje z dodatnimi poskusi vnosa napačnega gesla. Ob uspešni prijavi je uporabnik preusmerjen na pozdravno stran.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="images/welcomePage.png" alt="alter text" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><em>Pozdravna stran uporabnika <code>test</code></em></td>
+</tr>
+</tbody></table>
 <h1 id='vzdrzevanje-projektov'>Vzdrževanje projektov</h1>
 <p>Omogoča kreiranje, urejanje in brisanje projektov. Te funkcije so na voljo le uporabnikom z vlogo <code>Kanban Master</code>.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="images/projectPage.png" alt="alter text" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><em>Stran <code>/project</code> za pregled in ustvarjanje projektov</em></td>
+</tr>
+</tbody></table>
 <h2 id='kreiranje-novega-projekta'>Kreiranje novega projekta</h2>
 <p>Do obrazca za kreiranje projektov pridemo tako, da v orodni vrstici izberemo <code>Projects</code> in nato kliknemo gumb <code>Create project</code>.
 V obrazec moramo vnesti ime projekta, naročnika, datum začetka in konca ter iz seznama izbrati razvojno ekipo.
@@ -629,10 +690,30 @@ Pri izpolnjevanju moramo upoštevati naslednje omejitve:</p>
 </ul>
 
 <p>Po končanem vnosu podatkov, kliknemo gumb <code>Submit</code>. Če so bili vsi podatki pravilno vnešeni in omejitve upoštevane, se projekt ustvari. V nasprotnem primeru se nam prikaže opozorilo, ki nam pove, katera polja so bila napačno vnešena.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="images/createProjectForm.png" alt="alter text" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><em>Formular za ustvarjanje novega projekta. Vsi podatki so obvezni, veljajo zgornje omejitve</em></td>
+</tr>
+</tbody></table>
 <h2 id='urejanje-projekta'>Urejanje projekta</h2>
-<p>Projekte lahko po kreiranju tudi urejamo. V orodni vrstici moramo izbrati <code>Projects</code> in nato klikniti na projekt, ki ga želimo urediti. Odprejo se nam podrobne informacije, pod katerimi se nahaja gumb <code>Edit</code>. Ob kliku na ta gumb se nam odpre obrazec za urejanje. Uredimo lahko enaka polja kot pri kreiranju, pri čemer moramo upoštevati zgoraj omenjene omejitve. V primeru, da smo na projektu že začeli z delom in smo mu že določili kartice, datuma začetka ne moramo več spreminjati.</p>
+<p>Projekte lahko po kreiranju tudi urejamo. V orodni vrstici moramo izbrati <code>Projects</code>, tako dostopamo do strani <code>/project</code> in nato kliknemo na projekt, ki ga želimo urediti. Odprejo se nam podrobne informacije, pod katerimi se nahaja gumb <code>Edit</code>. Ob kliku na ta gumb se nam odpre obrazec za urejanje. Uredimo lahko enaka polja kot pri kreiranju, pri čemer moramo upoštevati zgoraj omenjene omejitve. V primeru, da smo na projektu že začeli z delom in smo mu že določili kartice, datuma začetka ne moramo več spreminjati.</p>
 <h2 id='brisanje-projekta'>Brisanje projekta</h2>
-<p>Če želimo projekt izbrisati, moramo v orodni vrstici izbrati <code>Projects</code>, klikniti na projekt, ki ga želimo izbrisati in klikniti na gumb <code>Delete</code>. Pojavi se nam potrditveno okno, kjer ponovno kliknemo <code>Delete</code> in s tem izbrišemo projekt.</p>
+<p>Če želimo projekt izbrisati, moramo v orodni vrstici izbrati <code>Projects</code>, klikniti na projekt, ki ga želimo izbrisati in klikniti na gumb <code>Delete</code>. Pojavi se nam potrditveno okno, kjer ponovno kliknemo <code>Delete</code> in tako izbrišemo projekt.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="images/confirmProjectDeletion.png" alt="alter text" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><em>Potrditveno okno za izbris</em></td>
+</tr>
+</tbody></table>
 <h1 id='vzdrzevanje-razvojnih-skupin'>Vzdrževanje razvojnih skupin</h1>
 <p>Omogoča kreiranje, urejanje in vpogled v razvojne skupine. Ustvarjanje in urejanje je omogočeno le uporabniku z vlogo <code>Kanban Master</code>. Do strani z pregledom nad razvojnimi skupinami [/dev-team] pridemo tako, da v orodoni vrstici kliknemo na gumb <code>Dev team</code></p>
 <h2 id='kreiranje-razvojne-skupine'>Kreiranje razvojne skupine</h2>
@@ -644,8 +725,28 @@ Pri izpolnjevanju moramo upoštevati naslednje omejitve:</p>
 </ul>
 
 <p>Po končanem vnosu podatkov, kliknemo gumb <code>Submit</code>. Če so bili vsi podatki pravilno vnešeni in omejitve upoštevane, se razvojna skupina ustvari. V nasprotnem primeru se nam prikaže opozorilo, ki nam pove, katera polja so bila napačno vnešena.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="images/editDevteam.png" alt="alter text" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><em>Formular za ustvarjanje Razvojne skupine</em></td>
+</tr>
+</tbody></table>
 <h2 id='urejanje-razvojne-skupine'>Urejanje razvojne skupine</h2>
-<p>Razvojne skupine lahko po kreiranju tudi urejamo. V orodni vrstici moramo izbrati <code>Dev team</code> in nato klikniti na razvojno skupino, katero želimo urejati. Odprejo se nam opis izbrane razvojne skupine. Na desni strani se nahajata gumba za urejanje razvojne skupine in povabitev novega kanban mastra.</p>
+<p>Razvojne skupine lahko po kreiranju tudi urejamo. V orodni vrstici moramo izbrati zavihek <code>Dev team</code> in nato klikniti na razvojno skupino, katero želimo urejati. Odprejo se nam podrobnosti izbrane razvojne skupine. Na desni strani se nahajata gumba za urejanje razvojne skupine in povabitev novega kanban mastra.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="images/editDevteam2.png" alt="alter text" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><em>Gumba za urejanje Razvojne skupine</em></td>
+</tr>
+</tbody></table>
 <h2 id='urejanje-imena-in-vlog-v-razvojni-skupini'>Urejanje imena in vlog v razvojni skupini</h2>
 <p>Z klikom na gumb <code>Edit development team</code> se nam odpre obrazec, v katerem lahko spremenimo ime skupine, product ownerja in dodajamo ali odstranjamo razvijalce. Razvojno skupino je mozno urejati le v okvirju kriterijev, ki so enaki kot ob ustvarjanju nove razvojne skupine. Treba je poskrbeti, da so vse vloge pravilno zastopane. Ob nepravilnem izboru, nas sistem opozori in ne dopusti dokončanja urejanja.
 Urejanje končamo z klikom na gumb <code>SUBMIT</code>.</p>
@@ -655,13 +756,25 @@ Urejanje končamo z klikom na gumb <code>SUBMIT</code>.</p>
 <p>Omogoča kreiranje, urejanje in brisanje table. Te funkcije so na voljo le uporabnikom z vlogo <code>Kanban Master</code>.</p>
 <h2 id='ustvarjanje-table'>Ustvarjanje table</h2>
 <p>Z obiskom strani <code>/board</code> se prikažejo vse table do katerih uporabnik lahko dostopa. Če je uporabnik v vlogi <code>Kanban Master</code>, lahko ustvari novo tablo s klikom na gumb <code>Create</code>.
-To ga bo preusmerilo na stran <code>/board-edit</code>, kjer se bo prikazal seznam z lokalno shranjenimi tabelami. Te tabele se še niso ustvarile v bazi in se hranijo lokalo izključno za urejanje. Ko imamo željeno obliko tabele, s klikom gumb <code>Create</code> ustvarimo tabelo.</p>
+To ga bo preusmerilo na stran <code>/board-edit</code>, kjer se bo prikazal seznam z lokalno shranjenimi tablami. Te table se še niso ustvarile v bazi in se hranijo lokalo izključno za urejanje.</p>
+
+<p>S klikom na gumb <code>+</code> ustvarimo prvi stolpec. Naslednje stolpce nato ustvarjamo za klikom na modre gumbke z puščicami. Mozno je ustvariti stolpec levo, desno in podstolpec. Ko imamo željeno obliko table, s klikom gumb <code>Create</code> ustvarimo tablo.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="images/createBoardForm.png" alt="alter text" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><em>Kreiranje table</em></td>
+</tr>
+</tbody></table>
 <h2 id='urejanje-table-2'>Urejanje table</h2>
-<p>Ustvarjeno tabelo naknadno lahko tudi spreminjamo. Z na strani <code>/board</code> klikom na tabelo obiščemo stran <code>/board/{id_tabele}</code>, ki vsebuje podrobnosti tabele in hkrati tudi gumb <code>Edit</code>, ki je dovoljen uporabniku v vlogi Kanban Mastra. Z klikom na gumb <code>Edit</code> obiščemo stran <code>/board/{id_tabele}/edit</code>, kjer lahko spreminjamo tabelo. Možno je dodajanje in odvzemanje obstoječih projektov. Dodajamo in spreminjamo lahko tudi stolpce, ki ne vsebujejo kartic.</p>
+<p>Ustvarjeno tablo naknadno lahko tudi spreminjamo. Z na strani <code>/board</code> klikom na tablo obiščemo stran <code>/board/{id_tabele}</code>, ki vsebuje podrobnosti tabele in hkrati tudi gumb <code>Edit</code>, ki je dovoljen uporabniku v vlogi Kanban Mastra. Z klikom na gumb <code>Edit</code> obiščemo stran <code>/board/{id_tabele}/edit</code>, kjer lahko spreminjamo tablo. Možno je dodajanje in odvzemanje obstoječih projektov. Dodajamo in spreminjamo lahko tudi stolpce, ki ne vsebujejo kartic.</p>
 <h2 id='prikaz-table'>Prikaz table</h2>
 <p>Na strani <code>/board</code> so prikazane vse table dostopne vpisanemu uporabniku. Za bolj podroben pogled lahko uporabnik klikne na željeno tablo, kar ga preusmeri na stran <code>/board/{id_table}</code> z podrobnostmi table.</p>
 <h2 id='kopiranje-table'>Kopiranje table</h2>
-<p>Ustvarjene tabelo lahko na strani za urejanje <code>/board/{id_tabele}/edit</code> kopiramo z klikom na gumb <code>Copy</code>, kar bo ustvarilo in preusmerilo uporabnika na novo lokalno tablo, ki je strukturno enaka.</p>
+<p>Ustvarjene tablo lahko na strani za urejanje <code>/board/{id_tabele}/edit</code> kopiramo z klikom na gumb <code>Copy</code>, kar bo ustvarilo in preusmerilo uporabnika na novo lokalno tablo, ki je strukturno enaka.</p>
 <h1 id='kartice'>Kartice</h1>
 <p>Kartice predstavljajo naloge, ki jih je za realizacijo projekta treba narediti. Kartice so dveh vrst, navadne in z Ćvišjo prioriteto&quot; <code>(Silver Bullet)</code></p>
 <h2 id='ustvarjanje-kartic'>Ustvarjanje kartic</h2>
