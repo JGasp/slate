@@ -19,7 +19,7 @@ includes:
 search: true
 ---
 
-# Introduction
+# Uvod
 
 Dobrodošli v dokumentaciji Smrpo7 Kanban sistema.
 

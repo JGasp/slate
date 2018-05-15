@@ -7,22 +7,35 @@ V datoteki `includes/_user_manual.md` se bo pisalo navodila za uporabo.
 
 Vzdrževanje uporabnikov se izvaja preko administratorske [/admin](http://http://localhost:4200/admin), ki je na voljo le uporabnikom v vlogi administratorja.
 
+|![alter text](/images/admin.png)|
+|:--:|
+| *Administratorska stran `/admin`* |
+
 ## Dodajanje novega uporabnika
 
-Na administrativni strani `/admin` s klikom na gumb create administrator lahko ustvari novega uporabnika.
+Na administrativni strani `/admin` s klikom na gumb `create`, administrator lahko ustvari novega uporabnika.
+
+|![alter text](/images/createUserForm.png)|
+|:--:|
+| *Obrazec za dodajanje novega uporabnika. Vsi podatki so obvezni.* |
 
 ## Pregled uporabnikov
 
-Administratorju je omogočeno pregledovanje in iskanje vseh uporabnikov.
-Išče lahko po ključni besedi z iskalnim poljem, hkrati lahko išče tudi po statusu aktivnosti z klikom na okno Deleted.
+Administratorju je omogočeno pregledovanje in iskanje vseh uporabnikov. Na administrativni strani `/admin` lahko administrator pregleda ustvarjene uporabnike.
+Išče lahko po ključni besedi z iskalnim poljem, hkrati lahko išče tudi po statusu aktivnosti z klikom na okno Deleted. Za izpis podrobnosti je treba z klikom miške izbrati željenega uporabnika.
+Z izbiro uporabnika se izpišejo njegove podrobnosti in njegove možne vloge. Rdeča barva pomeni da uporabnik nima te vloge.
+
+|![alter text](/images/adminPage.png)|
+|:--:|
+| *Prikaz izpisa za uporabnika `dev@test2`* |
 
 ## Dodajanje ali spreminjanje gesla
 
-Administrator lahko ponastavi geslo z klikom na gumb `Set password`, ki se nahaja v oknu s podrobnostmi uporabnika.
+Administrator lahko ponastavi geslo z klikom na gumb `Set password`, ki se nahaja v oknu s podrobnostmi uporabnika. Geslo mora vsebovati osem znakov, ki morajo vključevati vsaj eno število in eno črko.
 
 ## Upravljanje s pravicami uporabnika
 
-Administrator ob ustvarjanju ali ob urejanju uporabniškega profila lahko nastavlja vloge v katerih uporabnik nastopa.
+Administrator ob ustvarjanju ali ob urejanju uporabniškega profila preko gumba `Edit`, lahko nastavlja vloge v katerih uporabnik nastopa.
 
 Vloga | Pomen
 --- | ---
@@ -38,11 +51,23 @@ Ponovno ga nato lahko aktivira s klikom na gumb `Activate`.
 
 ## Vpis uporabnikov v sistem
 
-Uporabniki se lahko vpisujejo v sistem preko uporabniškega imena ali elektronske pošte. Če uporabnik napačno vnese geslo 3 krat zapored se račun začasno blokira za 10 sekund, kar se nato povečuje z dodatnimi poskusi vnosa napačnega gesla.
+|![alter text](/images/login.png)|
+|:--:|
+| *Prikaz strani `dashboard`* |
+
+Uporabniki se lahko vpisujejo v sistem na strani `dashboard` preko gumba `Log in`. Ta jih preusmeri na prijavno okno, kjer vpišejo svoje uporabniško ime ali elektronsko pošto in geslo. Če uporabnik napačno vnese geslo tri krat zapored se račun začasno blokira za 10 sekund, kar se nato povečuje z dodatnimi poskusi vnosa napačnega gesla. Ob uspešni prijavi je uporabnik preusmerjen na pozdravno stran.
+
+|![alter text](/images/welcomePage.png)|
+|:--:|
+| *Pozdravna stran uporabnika `test`* |
 
 # Vzdrževanje projektov
 
 Omogoča kreiranje, urejanje in brisanje projektov. Te funkcije so na voljo le uporabnikom z vlogo `Kanban Master`.
+
+|![alter text](/images/projectPage.png)|
+|:--:|
+| *Stran `/project` za pregled in ustvarjanje projektov* |
 
 ## Kreiranje novega projekta
 
@@ -56,13 +81,21 @@ Pri izpolnjevanju moramo upoštevati naslednje omejitve:
 
 Po končanem vnosu podatkov, kliknemo gumb `Submit`. Če so bili vsi podatki pravilno vnešeni in omejitve upoštevane, se projekt ustvari. V nasprotnem primeru se nam prikaže opozorilo, ki nam pove, katera polja so bila napačno vnešena.
 
+|![alter text](/images/createProjectForm.png)|
+|:--:|
+| *Formular za ustvarjanje novega projekta. Vsi podatki so obvezni, veljajo zgornje omejitve* |
+
 ## Urejanje projekta
 
-Projekte lahko po kreiranju tudi urejamo. V orodni vrstici moramo izbrati `Projects` in nato klikniti na projekt, ki ga želimo urediti. Odprejo se nam podrobne informacije, pod katerimi se nahaja gumb `Edit`. Ob kliku na ta gumb se nam odpre obrazec za urejanje. Uredimo lahko enaka polja kot pri kreiranju, pri čemer moramo upoštevati zgoraj omenjene omejitve. V primeru, da smo na projektu že začeli z delom in smo mu že določili kartice, datuma začetka ne moramo več spreminjati.
+Projekte lahko po kreiranju tudi urejamo. V orodni vrstici moramo izbrati `Projects`, tako dostopamo do strani `/project` in nato kliknemo na projekt, ki ga želimo urediti. Odprejo se nam podrobne informacije, pod katerimi se nahaja gumb `Edit`. Ob kliku na ta gumb se nam odpre obrazec za urejanje. Uredimo lahko enaka polja kot pri kreiranju, pri čemer moramo upoštevati zgoraj omenjene omejitve. V primeru, da smo na projektu že začeli z delom in smo mu že določili kartice, datuma začetka ne moramo več spreminjati.
 
 ## Brisanje projekta
 
-Če želimo projekt izbrisati, moramo v orodni vrstici izbrati `Projects`, klikniti na projekt, ki ga želimo izbrisati in klikniti na gumb `Delete`. Pojavi se nam potrditveno okno, kjer ponovno kliknemo `Delete` in s tem izbrišemo projekt.
+Če želimo projekt izbrisati, moramo v orodni vrstici izbrati `Projects`, klikniti na projekt, ki ga želimo izbrisati in klikniti na gumb `Delete`. Pojavi se nam potrditveno okno, kjer ponovno kliknemo `Delete` in tako izbrišemo projekt.
+
+|![alter text](/images/confirmProjectDeletion.png)|
+|:--:|
+| *Potrditveno okno za izbris* |
 
 # Vzdrževanje razvojnih skupin
 
@@ -77,9 +110,18 @@ Do obrazca za kreiranje razvojne skupine pridemo tako, da kliknemo gumb `Create 
 
 Po končanem vnosu podatkov, kliknemo gumb `Submit`. Če so bili vsi podatki pravilno vnešeni in omejitve upoštevane, se razvojna skupina ustvari. V nasprotnem primeru se nam prikaže opozorilo, ki nam pove, katera polja so bila napačno vnešena.
 
+|![alter text](/images/editDevteam.png)|
+|:--:|
+| *Formular za ustvarjanje Razvojne skupine* |
+
 ## Urejanje razvojne skupine
 
-Razvojne skupine lahko po kreiranju tudi urejamo. V orodni vrstici moramo izbrati `Dev team` in nato klikniti na razvojno skupino, katero želimo urejati. Odprejo se nam opis izbrane razvojne skupine. Na desni strani se nahajata gumba za urejanje razvojne skupine in povabitev novega kanban mastra.
+Razvojne skupine lahko po kreiranju tudi urejamo. V orodni vrstici moramo izbrati zavihek `Dev team` in nato klikniti na razvojno skupino, katero želimo urejati. Odprejo se nam podrobnosti izbrane razvojne skupine. Na desni strani se nahajata gumba za urejanje razvojne skupine in povabitev novega kanban mastra.
+
+
+|![alter text](/images/editDevteam2.png)|
+|:--:|
+| *Gumba za urejanje Razvojne skupine* |
 
 ## Urejanje imena in vlog v razvojni skupini
 
@@ -98,11 +140,17 @@ Omogoča kreiranje, urejanje in brisanje table. Te funkcije so na voljo le upora
 ## Ustvarjanje table
 
 Z obiskom strani `/board` se prikažejo vse table do katerih uporabnik lahko dostopa. Če je uporabnik v vlogi `Kanban Master`, lahko ustvari novo tablo s klikom na gumb `Create`.
-To ga bo preusmerilo na stran `/board-edit`, kjer se bo prikazal seznam z lokalno shranjenimi tabelami. Te tabele se še niso ustvarile v bazi in se hranijo lokalo izključno za urejanje. Ko imamo željeno obliko tabele, s klikom gumb `Create` ustvarimo tabelo.
+To ga bo preusmerilo na stran `/board-edit`, kjer se bo prikazal seznam z lokalno shranjenimi tablami. Te table se še niso ustvarile v bazi in se hranijo lokalo izključno za urejanje.
+
+S klikom na gumb `+` ustvarimo prvi stolpec. Naslednje stolpce nato ustvarjamo za klikom na modre gumbke z puščicami. Mozno je ustvariti stolpec levo, desno in podstolpec. Ko imamo željeno obliko table, s klikom gumb `Create` ustvarimo tablo.
+
+|![alter text](/images/createBoardForm.png)|
+|:--:|
+| *Kreiranje table* |
 
 ## Urejanje table
 
-Ustvarjeno tabelo naknadno lahko tudi spreminjamo. Z na strani `/board` klikom na tabelo obiščemo stran `/board/{id_tabele}`, ki vsebuje podrobnosti tabele in hkrati tudi gumb `Edit`, ki je dovoljen uporabniku v vlogi Kanban Mastra. Z klikom na gumb `Edit` obiščemo stran `/board/{id_tabele}/edit`, kjer lahko spreminjamo tabelo. Možno je dodajanje in odvzemanje obstoječih projektov. Dodajamo in spreminjamo lahko tudi stolpce, ki ne vsebujejo kartic.
+Ustvarjeno tablo naknadno lahko tudi spreminjamo. Z na strani `/board` klikom na tablo obiščemo stran `/board/{id_tabele}`, ki vsebuje podrobnosti tabele in hkrati tudi gumb `Edit`, ki je dovoljen uporabniku v vlogi Kanban Mastra. Z klikom na gumb `Edit` obiščemo stran `/board/{id_tabele}/edit`, kjer lahko spreminjamo tablo. Možno je dodajanje in odvzemanje obstoječih projektov. Dodajamo in spreminjamo lahko tudi stolpce, ki ne vsebujejo kartic.
 
 ##Prikaz table
 
@@ -110,7 +158,7 @@ Na strani `/board` so prikazane vse table dostopne vpisanemu uporabniku. Za bolj
 
 ## Kopiranje table
 
-Ustvarjene tabelo lahko na strani za urejanje `/board/{id_tabele}/edit` kopiramo z klikom na gumb `Copy`, kar bo ustvarilo in preusmerilo uporabnika na novo lokalno tablo, ki je strukturno enaka.
+Ustvarjene tablo lahko na strani za urejanje `/board/{id_tabele}/edit` kopiramo z klikom na gumb `Copy`, kar bo ustvarilo in preusmerilo uporabnika na novo lokalno tablo, ki je strukturno enaka.
 
 #Kartice
 
