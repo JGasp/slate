@@ -222,3 +222,26 @@ Na strani s prikazom podrobnosti kartice lahko vidimo njeno ime, oceno zahtevnos
 lahko vidimo zgodovino premikanja kartice. V zgodovini premikanja kartic so posebej označeni premiki kartic, kjer je
 bila omejitev WIP prekršena. Tu so vidne tudi kršitve omejitev WIP, ko je bil maksimalni WIP stolpca zmanjšan tako, da
 je bil trenutni WIP presežen.
+
+#Analiza in statistika
+
+Na strani `analysis`, dostopni preko orodne vrstice na zavihku `Analaysis` se nahaja aplikacija za analizo projektov.
+
+|![alter text](/images/analysis.png)|
+|:--:|
+| *Forma za nastavitev atributov za prikaz analize* |
+
+##Prikaz kumulativnega diagrama delovnega toka
+
+Na strani `analysis` lahko generiramo razne statistike. Za prikaz kumulativnega diagrama delovnega toka, je treba izbrati zavihek `Card workflow diagram` in izbrati `projekt` katerega želimo analizirati. Ko izberemo projekt, se nam prikažejo imena stolpcev, ki se nahajajo na kanban tabli tega projekta. Z levim klikom miške lahko izbiramo katere stolpce želimo prikazati. 
+
+Možna je tudi nastavitev filtrov:
+
+Filter | Pomen
+--- | ---
+Show | Izbira časovnega obdobja, ki ga želimo videti na izpisu
+Created | Prikaz karitc kreiranih v določenem časovnem obdobju
+Development start | Prikaz kartic v fazi razvoja v določenem obdobju
+Finished | Prikaz končanih kartic v časovnem obdobju
+Workload | Prikaz kartic z določenimi zahtevnostmi
+
