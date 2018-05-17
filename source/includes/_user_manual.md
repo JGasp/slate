@@ -245,3 +245,19 @@ Development start | Prikaz kartic v fazi razvoja v določenem obdobju
 Finished | Prikaz končanih kartic v časovnem obdobju
 Workload | Prikaz kartic z določenimi zahtevnostmi
 
+##Izračun povprečnega časa
+
+KanbanMaster lahko za izbrano tablo določi podmnožico kartic in izračuna povprečni potrebni čas izdelave (average lead time).
+
+Na podlagi podatkov o premikih iz stolpca v stolpec se lahko izračuna čas »potovanja« kartice med poljubnima stolpcema. Kriteriji za določitev podmnožice: 
+
+1. Projekt, ki mu kartica pripada
+2. časovni interval, v katerem je bila kartica kreirana
+3. časovni interval, v katerem je bila kartica končana (premaknjena v stolpec, ki sledi stolpcu za sprejemno testiranje) 
+4. časovni interval, v katerem se je dejansko pričel razvoj
+5. zahtevnost (število točk od-do) 
+6. tip kartice (nova funkcionalnost, silver bullet, zavrnjena zgodba)
+
+Ko imamo izbrane ustrezne kriterije, s klikom na gumb `Submit` generiramo izračun.
+
+##Izpis kršitev WIP
