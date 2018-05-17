@@ -319,6 +319,14 @@
               </ul>
           </li>
           <li>
+            <a href="#analiza-in-statistika" class="toc-h1 toc-link" data-title="analiza-in-statistika">Analiza in statistika</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#prikaz-kumulativnega-diagrama-delovnega-toka" class="toc-h2 toc-link" data-title="prikaz-kumulativnega-diagrama-delovnega-toka">Prikaz kumulativnega diagrama delovnega toka</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#dokumentacija-api" class="toc-h1 toc-link" data-title="dokumentacija-api">Dokumentacija API</a>
           </li>
       </div>
@@ -873,6 +881,50 @@ podrobnosti projekta.</p>
 lahko vidimo zgodovino premikanja kartice. V zgodovini premikanja kartic so posebej označeni premiki kartic, kjer je
 bila omejitev WIP prekršena. Tu so vidne tudi kršitve omejitev WIP, ko je bil maksimalni WIP stolpca zmanjšan tako, da
 je bil trenutni WIP presežen.</p>
+<h1 id='analiza-in-statistika'>Analiza in statistika</h1>
+<p>Na strani <code>analysis</code>, dostopni preko orodne vrstice na zavihku <code>Analaysis</code> se nahaja aplikacija za analizo projektov.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="images/analysis.png" alt="alter text" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><em>Forma za nastavitev atributov za prikaz analize</em></td>
+</tr>
+</tbody></table>
+<h2 id='prikaz-kumulativnega-diagrama-delovnega-toka'>Prikaz kumulativnega diagrama delovnega toka</h2>
+<p>Na strani <code>analysis</code> lahko generiramo razne statistike. Za prikaz kumulativnega diagrama delovnega toka, je treba izbrati zavihek <code>Card workflow diagram</code> in izbrati <code>projekt</code> katerega želimo analizirati. Ko izberemo projekt, se nam prikažejo imena stolpcev, ki se nahajajo na kanban tabli tega projekta. Z levim klikom miške lahko izbiramo katere stolpce želimo prikazati. </p>
+
+<p>Možna je tudi nastavitev filtrov:</p>
+
+<table><thead>
+<tr>
+<th>Filter</th>
+<th>Pomen</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Show</td>
+<td>Izbira časovnega obdobja, ki ga želimo videti na izpisu</td>
+</tr>
+<tr>
+<td>Created</td>
+<td>Prikaz karitc kreiranih v določenem časovnem obdobju</td>
+</tr>
+<tr>
+<td>Development start</td>
+<td>Prikaz kartic v fazi razvoja v določenem obdobju</td>
+</tr>
+<tr>
+<td>Finished</td>
+<td>Prikaz končanih kartic v časovnem obdobju</td>
+</tr>
+<tr>
+<td>Workload</td>
+<td>Prikaz kartic z določenimi zahtevnostmi</td>
+</tr>
+</tbody></table>
 <h1 id='dokumentacija-api'>Dokumentacija API</h1>
 <p>V datoteki <code>includes/_api_doc.md</code> se bo pisalo dokumentacijo REST endpoint-ov.</p>
 
