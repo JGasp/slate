@@ -324,6 +324,12 @@
                   <li>
                     <a href="#prikaz-kumulativnega-diagrama-delovnega-toka" class="toc-h2 toc-link" data-title="prikaz-kumulativnega-diagrama-delovnega-toka">Prikaz kumulativnega diagrama delovnega toka</a>
                   </li>
+                  <li>
+                    <a href="#izracun-povprecnega-casa" class="toc-h2 toc-link" data-title="izracun-povprecnega-casa">Izračun povprečnega časa</a>
+                  </li>
+                  <li>
+                    <a href="#izpis-krsitev-wip" class="toc-h2 toc-link" data-title="izpis-krsitev-wip">Izpis kršitev WIP</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -925,6 +931,36 @@ je bil trenutni WIP presežen.</p>
 <td>Prikaz kartic z določenimi zahtevnostmi</td>
 </tr>
 </tbody></table>
+<h2 id='izracun-povprecnega-casa'>Izračun povprečnega časa</h2>
+<p>KanbanMaster lahko za izbrano tablo določi podmnožico kartic in izračuna povprečni potrebni čas izdelave (average lead time).</p>
+
+<p>Na podlagi podatkov o premikih iz stolpca v stolpec se lahko izračuna čas »potovanja« kartice med poljubnima stolpcema. Kriteriji za določitev podmnožice: </p>
+
+<ol>
+<li>Projekt, ki mu kartica pripada</li>
+<li>časovni interval, v katerem je bila kartica kreirana</li>
+<li>časovni interval, v katerem je bila kartica končana (premaknjena v stolpec, ki sledi stolpcu za sprejemno testiranje) </li>
+<li>časovni interval, v katerem se je dejansko pričel razvoj</li>
+<li>zahtevnost (število točk od-do) </li>
+<li>tip kartice (nova funkcionalnost, silver bullet, zavrnjena zgodba)</li>
+</ol>
+
+<p>Ko imamo izbrane ustrezne kriterije, s klikom na gumb <code>Submit</code> generiramo izračun.</p>
+<h2 id='izpis-krsitev-wip'>Izpis kršitev WIP</h2>
+<p>Uporabnik lahko izpiše seznam vseh kršitev omejitve WIP za določeno podmnožico kartic v izbranem časovnem obdobju.</p>
+
+<p>Za vsako kršitev se izpiše številka in ime kartice, datum kršitve, stolpec kršitve,  uporabnik, ki je s prestavljanjem kartice povzročil kršitev, in vzrok kršitve.</p>
+
+<p>Kriteriji za določitev podmnožice so enaki kot pri izračunu povprečnega potrebnega časa: </p>
+
+<ol>
+<li>projekt, ki mu kartica pripada</li>
+<li>časovni interval, v katerem je bila kartica kreirana</li>
+<li>časovni interval, v katerem je bila kartica končana</li>
+<li>časovni interval, v katerem se je dejansko pričel razvoj</li>
+<li>zahtevnost (število točk od-do) </li>
+<li>tip kartice (nova funkcionalnost, silver bullet, zavrnjena zgodba)</li>
+</ol>
 <h1 id='dokumentacija-api'>Dokumentacija API</h1>
 <p>V datoteki <code>includes/_api_doc.md</code> se bo pisalo dokumentacijo REST endpoint-ov.</p>
 
