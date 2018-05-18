@@ -261,3 +261,16 @@ Na podlagi podatkov o premikih iz stolpca v stolpec se lahko izračuna čas »po
 Ko imamo izbrane ustrezne kriterije, s klikom na gumb `Submit` generiramo izračun.
 
 ##Izpis kršitev WIP
+
+Uporabnik lahko izpiše seznam vseh kršitev omejitve WIP za določeno podmnožico kartic v izbranem časovnem obdobju.
+ 
+Za vsako kršitev se izpiše številka in ime kartice, datum kršitve, stolpec kršitve,  uporabnik, ki je s prestavljanjem kartice povzročil kršitev, in vzrok kršitve.
+
+Kriteriji za določitev podmnožice so enaki kot pri izračunu povprečnega potrebnega časa: 
+
+1. projekt, ki mu kartica pripada
+2. časovni interval, v katerem je bila kartica kreirana
+3. časovni interval, v katerem je bila kartica končana
+4. časovni interval, v katerem se je dejansko pričel razvoj
+5. zahtevnost (število točk od-do) 
+6. tip kartice (nova funkcionalnost, silver bullet, zavrnjena zgodba)
