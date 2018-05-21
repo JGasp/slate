@@ -160,6 +160,27 @@ Na strani `/board` so prikazane vse table dostopne vpisanemu uporabniku. Za bolj
 
 Ustvarjene tablo lahko na strani za urejanje `/board/{id_tabele}/edit` kopiramo z klikom na gumb `Copy`, kar bo ustvarilo in preusmerilo uporabnika na novo lokalno tablo, ki je strukturno enaka.
 
+##Pravila za premikanje kartic po tabli
+
+KanbanMaster lahko določi pravila, katera uporabniška vloga lahko prestavi kartico iz nekega stolpca v drug stolpec.
+ 
+Za vsak stolpec in podstolpec neke table je možno definirati "dovoljenja" za prestavljanje kartic iz tega stolpca v nek drug stolpec. Vsako dovoljenje vsebuje podatke o uporabniški vlogi ter začetnem (izhodiščnem) in končnem stolpcu. Dovoljenja je mogoče spreminjati in brisati.
+
+Formular za določanje pravil table, je `Kanban master`ju dostopen na strani `/board`, preko gumba `Settings`, ki se nahaja v desnem zgornjem kotu.
+
+|![alter text](/images/cardMoveRules.png)|
+|:--:|
+| *Formular za določanje pravil premikov* |
+
+`Kanban Master` lahko preko formularja za vsako uporabnisko vlogo določi pravila premikanja kartic po stolpcih. To stori tako, da na formularju označi vlogo, kateri želi dodeliti pravice in stolpce na tabli, na katerih želi da določeno pravilo velja. S klikom na gumb `Add card rule` posamezno pravilo doda na seznam pravil. Ko konča z delom, z klikom na gumb "Apply" potrdi ustvarjena pravila.
+
+##Obveščanje o prekoračitvi roka
+
+KanbanMaster lahko dobi po elektronski pošti obvestilo s podatki o karticah, za katere bo v naslednjih n dneh potekel rok za dokončanje. Polje za nastavitev števila dni do konca, se nahaja na formularju, ki je dostopen na strani `/board`, preko gumba `Settings`.(Glej sliko zgoraj)
+
+Nastavi se število dni n (atribut table), ki so preostali do zahtevanega roka za dokončanje. Sistem avtomatsko generira sporočilo s podatki o vseh karticah, ki morajo biti končane v naslednjih d dneh. Na kartice, ki nimajo določenega datuma dokončanja, ta funkcionalnost nima vpliva.
+
+
 #Kartice
 
 Kartice predstavljajo naloge, ki jih je za realizacijo projekta treba narediti. Kartice so dveh vrst, navadne in z Ćvišjo prioriteto" `(Silver Bullet)`
@@ -222,6 +243,15 @@ Na strani s prikazom podrobnosti kartice lahko vidimo njeno ime, oceno zahtevnos
 lahko vidimo zgodovino premikanja kartice. V zgodovini premikanja kartic so posebej označeni premiki kartic, kjer je
 bila omejitev WIP prekršena. Tu so vidne tudi kršitve omejitev WIP, ko je bil maksimalni WIP stolpca zmanjšan tako, da
 je bil trenutni WIP presežen.
+
+##Prikaz "kritičnih" kartic
+
+`Kanban master` lahko preko gumba `Show Display Options` dostopa do polja, za nastavitev prikaza "kritičnih kartic". Kot prikazuje spodnja slika, se gumb in polje nahajata na vrhu table. V polje lahko `Kanban master` vnese število, kartice katerih rok za dokončanje bo pretekel čez vneseno število dni, začnejo na tabli utripati. 
+
+|![alter text](/images/DueCards.png)|
+|:--:|
+| *Polje za vnos števila* |
+
 
 #Analiza in statistika
 
