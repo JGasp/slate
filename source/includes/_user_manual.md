@@ -180,6 +180,10 @@ KanbanMaster lahko dobi po elektronski pošti obvestilo s podatki o karticah, za
 
 Nastavi se število dni n (atribut table), ki so preostali do zahtevanega roka za dokončanje. Sistem avtomatsko generira sporočilo s podatki o vseh karticah, ki morajo biti končane v naslednjih d dneh. Na kartice, ki nimajo določenega datuma dokončanja, ta funkcionalnost nima vpliva.
 
+##Ožanje stolpcev
+
+Prikaz stolpcev posamezne table je možno zožati z klikom na gumb "-/+", ki se nahaja levo od WIP omejitve
+
 
 #Kartice
 
@@ -243,6 +247,24 @@ Na strani s prikazom podrobnosti kartice lahko vidimo njeno ime, oceno zahtevnos
 lahko vidimo zgodovino premikanja kartice. V zgodovini premikanja kartic so posebej označeni premiki kartic, kjer je
 bila omejitev WIP prekršena. Tu so vidne tudi kršitve omejitev WIP, ko je bil maksimalni WIP stolpca zmanjšan tako, da
 je bil trenutni WIP presežen.
+
+##Podnaloge in podatki za realizacijo
+
+Razvijalec lahko vzdržuje podatke o nalogah, ki so potrebne za realizacijo uporabniške zgodbe.   Za vsako nalogo je možno vnesti ocenjeno število ur, potrebnih za realizacijo, in označiti, ali je naloga dokončana ali ne. Kartica se lahko premakne v stolpec za sprejemno testiranje samo, če so dokončane vse naloge.
+
+|![alter text](/images/subTasks.png)|
+|:--:|
+| *Polje za vnos števila* |
+
+Dodajanje podanlog in podrobnosti o njih je možno preko gumba `Create sub-task`, ki se nahaja na strani `/card/ID`. S klikom na ta gumb dostopamo do forme za dodajanje podnaloge. Podnalogi lahko dodamo:
+
+1. ime
+2. opis
+3. ocenjeno število ur
+4. skrbnika
+5. označimo ali je naloga opravljena
+
+
 
 ##Prikaz "kritičnih" kartic
 
