@@ -326,3 +326,9 @@ Kriteriji za določitev podmnožice so enaki kot pri izračunu povprečnega potr
 4. časovni interval, v katerem se je dejansko pričel razvoj
 5. zahtevnost (število točk od-do) 
 6. tip kartice (nova funkcionalnost, silver bullet, zavrnjena zgodba)
+
+##Pregled dela
+
+KanbanMaster lahko izdela pregled dela po posameznih razvijalcih.
+ 
+Za izbrano podmnožico kartic se lahko (na podlagi ocene zahtevnosti vsake kartice) izpiše število zgodb (kartic) in število točk, ki so jih realizirali (ali jih imajo v delu) posamezni razvijalci. Rezultat je prikazan tudi grafično v obliki dveh tortnih diagramov (eden za število zgodb in eden za število točk).  Podmnožica kartic se izbere na enak način kot pri izračunu povprečnega potrebnega časa. 
