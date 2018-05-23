@@ -296,6 +296,15 @@
                   <li>
                     <a href="#kopiranje-table" class="toc-h2 toc-link" data-title="kopiranje-table">Kopiranje table</a>
                   </li>
+                  <li>
+                    <a href="#pravila-za-premikanje-kartic-po-tabli" class="toc-h2 toc-link" data-title="pravila-za-premikanje-kartic-po-tabli">Pravila za premikanje kartic po tabli</a>
+                  </li>
+                  <li>
+                    <a href="#obvescanje-o-prekoracitvi-roka" class="toc-h2 toc-link" data-title="obvescanje-o-prekoracitvi-roka">Obveščanje o prekoračitvi roka</a>
+                  </li>
+                  <li>
+                    <a href="#ozanje-stolpcev" class="toc-h2 toc-link" data-title="ozanje-stolpcev">Ožanje stolpcev</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -315,6 +324,12 @@
                   </li>
                   <li>
                     <a href="#prikaz-podrobnosti-kartice" class="toc-h2 toc-link" data-title="prikaz-podrobnosti-kartice">Prikaz podrobnosti kartice</a>
+                  </li>
+                  <li>
+                    <a href="#podnaloge-in-podatki-za-realizacijo" class="toc-h2 toc-link" data-title="podnaloge-in-podatki-za-realizacijo">Podnaloge in podatki za realizacijo</a>
+                  </li>
+                  <li>
+                    <a href="#prikaz-quot-kriticnih-quot-kartic" class="toc-h2 toc-link" data-title="prikaz-kriticnih-kartic">Prikaz "kritičnih" kartic</a>
                   </li>
               </ul>
           </li>
@@ -789,6 +804,30 @@ To ga bo preusmerilo na stran <code>/board-edit</code>, kjer se bo prikazal sezn
 <p>Na strani <code>/board</code> so prikazane vse table dostopne vpisanemu uporabniku. Za bolj podroben pogled lahko uporabnik klikne na željeno tablo, kar ga preusmeri na stran <code>/board/{id_table}</code> z podrobnostmi table.</p>
 <h2 id='kopiranje-table'>Kopiranje table</h2>
 <p>Ustvarjene tablo lahko na strani za urejanje <code>/board/{id_tabele}/edit</code> kopiramo z klikom na gumb <code>Copy</code>, kar bo ustvarilo in preusmerilo uporabnika na novo lokalno tablo, ki je strukturno enaka.</p>
+<h2 id='pravila-za-premikanje-kartic-po-tabli'>Pravila za premikanje kartic po tabli</h2>
+<p>KanbanMaster lahko določi pravila, katera uporabniška vloga lahko prestavi kartico iz nekega stolpca v drug stolpec.</p>
+
+<p>Za vsak stolpec in podstolpec neke table je možno definirati &quot;dovoljenja&quot; za prestavljanje kartic iz tega stolpca v nek drug stolpec. Vsako dovoljenje vsebuje podatke o uporabniški vlogi ter začetnem (izhodiščnem) in končnem stolpcu. Dovoljenja je mogoče spreminjati in brisati.</p>
+
+<p>Formular za določanje pravil table, je <code>Kanban master</code>ju dostopen na strani <code>/board</code>, preko gumba <code>Settings</code>, ki se nahaja v desnem zgornjem kotu.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="images/cardMoveRules.png" alt="alter text" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><em>Formular za določanje pravil premikov</em></td>
+</tr>
+</tbody></table>
+
+<p><code>Kanban Master</code> lahko preko formularja za vsako uporabnisko vlogo določi pravila premikanja kartic po stolpcih. To stori tako, da na formularju označi vlogo, kateri želi dodeliti pravice in stolpce na tabli, na katerih želi da določeno pravilo velja. S klikom na gumb <code>Add card rule</code> posamezno pravilo doda na seznam pravil. Ko konča z delom, z klikom na gumb &quot;Apply&quot; potrdi ustvarjena pravila.</p>
+<h2 id='obvescanje-o-prekoracitvi-roka'>Obveščanje o prekoračitvi roka</h2>
+<p>KanbanMaster lahko dobi po elektronski pošti obvestilo s podatki o karticah, za katere bo v naslednjih n dneh potekel rok za dokončanje. Polje za nastavitev števila dni do konca, se nahaja na formularju, ki je dostopen na strani <code>/board</code>, preko gumba <code>Settings</code>.(Glej sliko zgoraj)</p>
+
+<p>Nastavi se število dni n (atribut table), ki so preostali do zahtevanega roka za dokončanje. Sistem avtomatsko generira sporočilo s podatki o vseh karticah, ki morajo biti končane v naslednjih d dneh. Na kartice, ki nimajo določenega datuma dokončanja, ta funkcionalnost nima vpliva.</p>
+<h2 id='ozanje-stolpcev'>Ožanje stolpcev</h2>
+<p>Prikaz stolpcev posamezne table je možno zožati z klikom na gumb &quot;-/+&quot;, ki se nahaja levo od WIP omejitve</p>
 <h1 id='kartice'>Kartice</h1>
 <p>Kartice predstavljajo naloge, ki jih je za realizacijo projekta treba narediti. Kartice so dveh vrst, navadne in z Ćvišjo prioriteto&quot; <code>(Silver Bullet)</code></p>
 <h2 id='ustvarjanje-kartic'>Ustvarjanje kartic</h2>
@@ -887,6 +926,40 @@ podrobnosti projekta.</p>
 lahko vidimo zgodovino premikanja kartice. V zgodovini premikanja kartic so posebej označeni premiki kartic, kjer je
 bila omejitev WIP prekršena. Tu so vidne tudi kršitve omejitev WIP, ko je bil maksimalni WIP stolpca zmanjšan tako, da
 je bil trenutni WIP presežen.</p>
+<h2 id='podnaloge-in-podatki-za-realizacijo'>Podnaloge in podatki za realizacijo</h2>
+<p>Razvijalec lahko vzdržuje podatke o nalogah, ki so potrebne za realizacijo uporabniške zgodbe.   Za vsako nalogo je možno vnesti ocenjeno število ur, potrebnih za realizacijo, in označiti, ali je naloga dokončana ali ne. Kartica se lahko premakne v stolpec za sprejemno testiranje samo, če so dokončane vse naloge.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="images/subTasks.png" alt="alter text" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><em>Polje za vnos števila</em></td>
+</tr>
+</tbody></table>
+
+<p>Dodajanje podanlog in podrobnosti o njih je možno preko gumba <code>Create sub-task</code>, ki se nahaja na strani <code>/card/ID</code>. S klikom na ta gumb dostopamo do forme za dodajanje podnaloge. Podnalogi lahko dodamo:</p>
+
+<ol>
+<li>ime</li>
+<li>opis</li>
+<li>ocenjeno število ur</li>
+<li>skrbnika</li>
+<li>označimo ali je naloga opravljena</li>
+</ol>
+<h2 id='prikaz-quot-kriticnih-quot-kartic'>Prikaz &quot;kritičnih&quot; kartic</h2>
+<p><code>Kanban master</code> lahko preko gumba <code>Show Display Options</code> dostopa do polja, za nastavitev prikaza &quot;kritičnih kartic&quot;. Kot prikazuje spodnja slika, se gumb in polje nahajata na vrhu table. V polje lahko <code>Kanban master</code> vnese število, kartice katerih rok za dokončanje bo pretekel čez vneseno število dni, začnejo na tabli utripati. </p>
+
+<table><thead>
+<tr>
+<th style="text-align: center"><img src="images/DueCards.png" alt="alter text" /></th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><em>Polje za vnos števila</em></td>
+</tr>
+</tbody></table>
 <h1 id='analiza-in-statistika'>Analiza in statistika</h1>
 <p>Na strani <code>analysis</code>, dostopni preko orodne vrstice na zavihku <code>Analaysis</code> se nahaja aplikacija za analizo projektov.</p>
 
